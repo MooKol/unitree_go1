@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>unitree_legged_msgs</name>
+  <version>0.0.1</version>
+  <description>
+    Custom message definitions for Unitree's legged robots.
+  </description>
+  <maintainer email="petropoulakispanagiotis@gmail.com">Panagiotis Petropoulakis</maintainer>
+  <license>TODO</license>
+
+  <!-- Build tool dependencies -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Dependencies for message generation -->
+  <depend>rosidl_default_generators</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
