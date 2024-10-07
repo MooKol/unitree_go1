@@ -9,11 +9,6 @@ from ament_index_python.packages import get_package_share_directory
 import xacro
 
 def generate_launch_description():
-    user_debug_arg = DeclareLaunchArgument(
-        'user_debug', default_value='false', description='Enable debug mode'
-    )
-
-    user_debug_value = LaunchConfiguration('user_debug')
 
     robot_description_path = os.path.join(
         get_package_share_directory('go1_description'),
@@ -21,13 +16,11 @@ def generate_launch_description():
         'robot.xacro'
     )
 
-    # user_debug_value.perform({})}
     robot_description = xacro.process_file(
         robot_description_path, mappings={'DEBUG': 'false'}
     ).toxml()
 
     return LaunchDescription([
-        user_debug_arg,
         # Joint State Publisher Node (with GUI)
         Node(
             package='joint_state_publisher_gui',
