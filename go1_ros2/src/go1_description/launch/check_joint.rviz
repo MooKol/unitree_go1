@@ -49,12 +49,15 @@ Visualization Manager:
         Z: 0
       Plane: XY
       Plane Cell Count: 10
-      Reference Frame: base_link
+      Reference Frame: <Fixed Frame>
       Value: true
     - Alpha: 0.5
       Class: rviz_default_plugins/RobotModel
       Collision Enabled: false
       Enabled: true
+      Description Source: Topic
+      Description Topic: 
+        Value: robot_description
       Links:
         All Links Enabled: true
         Expand Joint Details: false
@@ -256,7 +259,7 @@ Visualization Manager:
       Length: 1
       Name: Axes
       Radius: 0.10000000149011612
-      Reference Frame: base_link
+      Reference Frame: <Fixed Frame>
       Show Trail: false
       Value: false
     - Class: rviz_default_plugins/TF
@@ -310,7 +313,7 @@ Visualization Manager:
         Value: true
       Axis: Z
       Channel Name: intensity
-      Class: rviz/PointCloud2
+      Class: rviz_default_plugins/PointCloud2
       Color: 255; 255; 255
       Color Transformer: RGB8
       Decay Time: 0
@@ -338,7 +341,7 @@ Visualization Manager:
         Value: true
       Axis: Z
       Channel Name: intensity
-      Class: rviz/PointCloud2
+      Class: rviz_default_plugins/PointCloud2
       Color: 255; 255; 255
       Color Transformer: RGB8
       Decay Time: 0
@@ -366,7 +369,7 @@ Visualization Manager:
         Value: true
       Axis: Z
       Channel Name: intensity
-      Class: rviz/PointCloud2
+      Class: rviz_default_plugins/PointCloud2
       Color: 255; 255; 255
       Color Transformer: RGB8
       Decay Time: 0
@@ -394,7 +397,7 @@ Visualization Manager:
         Value: true
       Axis: Z
       Channel Name: intensity
-      Class: rviz/PointCloud2
+      Class: rviz_default_plugins/PointCloud2
       Color: 255; 255; 255
       Color Transformer: RGB8
       Decay Time: 0
@@ -459,7 +462,7 @@ Visualization Manager:
       Name: Current View
       Near Clip Distance: 0.009999999776482582
       Pitch: 0.3647974133491516
-      Target Frame: base_link
+      Target Frame: <Fixed Frame>
       Yaw: 4.123597621917725
     Saved: ~
 Window Geometry:
