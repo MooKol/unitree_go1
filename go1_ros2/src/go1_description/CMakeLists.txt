@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.5)
+project(go1_description)
+
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(Boost REQUIRED)
+
+
+include_directories(
+  ${Boost_INCLUDE_DIRS}  
+)
+
+# Export package dependencies
+ament_package()

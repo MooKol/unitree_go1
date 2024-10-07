@@ -9,7 +9,7 @@ class IMUSubscriber(Node):
     def __init__(self):
         super().__init__('imu_subscriber')
         self.subscription = self.create_subscription(IMU, 'imu_topic', self.listener_callback, 10)
-        self.subscription
+        self.subscription # Unused var warn
 
     def listener_callback(self, msg):
         self.get_logger().info(f'Received IMU data: quaternion={msg.quaternion}, gyroscope={msg.gyroscope}')
