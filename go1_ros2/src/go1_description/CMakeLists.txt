@@ -12,5 +12,9 @@ include_directories(
   ${Boost_INCLUDE_DIRS}  
 )
 
+install(DIRECTORY launch
+    DESTINATION share/${PROJECT_NAME}
+)
+
 # Export package dependencies
 ament_package()
