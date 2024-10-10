@@ -31,6 +31,10 @@ install(DIRECTORY launch
 install(DIRECTORY worlds
     DESTINATION share/${PROJECT_NAME}
 )
-
-# Package definition
+add_library(unitreeDrawForcePlugin SHARED plugin/draw_force_plugin.cc)
+target_link_libraries(unitreeDrawForcePlugin ${GAZEBO_LIBRARIES} rclcpp::rclcpp)
+ament_target_dependencies(unitreeDrawForcePlugin
+    rclcpp
+    geometry_msgs
+)
 ament_package()

@@ -33,6 +33,7 @@ def launch_setup(context, *args, **kwargs):
     ).toxml()
 
 
+    """
 
     ros_gz_sim = get_package_share_directory('ros_gz_sim')
     gzserver_cmd = IncludeLaunchDescription(
@@ -47,6 +48,7 @@ def launch_setup(context, *args, **kwargs):
         ),
         launch_arguments={'gz_args': '-g -v4 '}.items()
     )
+    """
 
     # Load URDF into parameter server
     robot_description_node = Node(
@@ -59,6 +61,24 @@ def launch_setup(context, *args, **kwargs):
                 {'use_sim_time': True},
             ],
         )
+    gazebo_model_path = os.path.join(get_package_prefix("go1_description"), "share")
+
+    gazebo_ros_pkg = get_package_share_directory('gazebo_ros')
+
+    # Launch Gazebo server (gzserver) with Gazebo Classic
+    gzserver_cmd = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(gazebo_ros_pkg, 'launch', 'gzserver.launch.py')
+        ),
+        launch_arguments={'world': world_path}.items()
+    )
+
+    # Launch Gazebo client (gzclient) for visualization
+    gzclient_cmd = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(gazebo_ros_pkg, 'launch', 'gzclient.launch.py')
+        )
+    )
 
     spawn_robot_node = Node(
         package='ros_gz_sim',
@@ -70,8 +90,19 @@ def launch_setup(context, *args, **kwargs):
         output='both'
         )
 
+    spawn_robot_node = Node(
+        package='gazebo_ros',
+        executable='spawn_entity.py',
+        arguments=[
+            '-entity', 'go1_robot',
+            '-topic', '/robot_description'
+        ],
+        output='screen'
+    )
 
-    return [robot_description_node, gzserver_cmd, gzclient_cmd, SetEnvironmentVariable("GAZEBO_MODEL_PATH", os.path.join(get_package_prefix("go1_description"), "share")), spawn_robot_node]
+
+    #return [robot_description_node, gzserver_cmd, gzclient_cmd, SetEnvironmentVariable("GAZEBO_MODEL_PATH", os.path.join(get_package_prefix("go1_description"), "share")), spawn_robot_node]
+    return [robot_description_node, gzclient_cmd, gzserver_cmd, spawn_robot_node]
 
 def generate_launch_description():
     wname_arg = DeclareLaunchArgument('wname', default_value='earth')
