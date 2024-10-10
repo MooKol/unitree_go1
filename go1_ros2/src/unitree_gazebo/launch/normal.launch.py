@@ -1,6 +1,6 @@
 import os
 
-from ament_index_python.packages import get_package_share_directory
+from ament_index_python.packages import get_package_share_directory, get_package_prefix
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, TextSubstitution, PythonExpression
@@ -71,7 +71,7 @@ def launch_setup(context, *args, **kwargs):
         )
 
 
-    return [robot_description_node, gzserver_cmd, gzclient_cmd, spawn_robot_node]
+    return [robot_description_node, gzserver_cmd, gzclient_cmd, SetEnvironmentVariable("GAZEBO_MODEL_PATH", os.path.join(get_package_prefix("go1_description"), "share")), spawn_robot_node]
 
 def generate_launch_description():
     wname_arg = DeclareLaunchArgument('wname', default_value='earth')
