@@ -27,14 +27,14 @@ namespace gazebo
             this->visual_namespace = "visual/";
             
             // Set topic name
-            if (!_sdf->HasElement("topicName"))
+            if (!_sdf->HasElement("topici_name"))
             {
                 RCLCPP_INFO(rclcpp::get_logger("UnitreeDrawForcePlugin"), "Force draw plugin missing <topicName>, defaults to /default_force_draw");
                 this->topic_name = "/default_force_draw";
             }
             else
             {
-                this->topic_name = _sdf->Get<std::string>("topicName");
+                this->topic_name = _sdf->Get<std::string>("topic_name");
             }
 
             // ROS 2 node initialization

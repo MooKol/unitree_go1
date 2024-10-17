@@ -5,7 +5,7 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, TextSubstitution, PythonExpression
 from launch_ros.actions import Node
-from launch.actions import OpaqueFunction
+from launch.actions import OpaqueFunction, ExecuteProcess
 from launch_ros.substitutions import FindPackageShare
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.actions import SetEnvironmentVariable, AppendEnvironmentVariable
@@ -66,12 +66,12 @@ def launch_setup(context, *args, **kwargs):
     gazebo_ros_pkg = get_package_share_directory('gazebo_ros')
 
     # Launch Gazebo server (gzserver) with Gazebo Classic
-    gzserver_cmd = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(gazebo_ros_pkg, 'launch', 'gzserver.launch.py')
+    gzserver_cmd = LaunchDescription([
+        ExecuteProcess(
+            cmd=['gzserver', '--verbose', '-s', 'libgazebo_ros_factory.so', world_path],
+            output='screen'
         ),
-        launch_arguments={'world': world_path}.items()
-    )
+    ])
 
     # Launch Gazebo client (gzclient) for visualization
     gzclient_cmd = IncludeLaunchDescription(

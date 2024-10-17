@@ -69,19 +69,90 @@
   <gazebo reference="imu_link">
     <gravity>true</gravity>
     <sensor name="imu_sensor" type="imu">
-      <always_on>true</always_on>
+    
+      <always_on>0</always_on>
       <update_rate>1000</update_rate>
       <visualize>true</visualize>
-      <topic>__default_topic__</topic>
+      <!--can not convert to ros2
+	      <topic>__default_topic__</topic>
+            -->
+            
+            
+            
+          <imu>
+            <angular_velocity>
+              <x>
+                <noise type="gaussian">
+                  <mean>0.0</mean>
+                  <stddev>2e-4</stddev>
+                  <bias_mean>0.0000075</bias_mean>
+                  <bias_stddev>0.0000008</bias_stddev>
+                </noise>
+              </x>
+              <y>
+                <noise type="gaussian">
+                  <mean>0.0</mean>
+                  <stddev>2e-4</stddev>
+                  <bias_mean>0.0000075</bias_mean>
+                  <bias_stddev>0.0000008</bias_stddev>
+                </noise>
+              </y>
+              <z>
+                <noise type="gaussian">
+                  <mean>0.0</mean>
+                  <stddev>2e-4</stddev>
+                  <bias_mean>0.0000075</bias_mean>
+                  <bias_stddev>0.0000008</bias_stddev>
+                </noise>
+              </z>
+            </angular_velocity>
+            <linear_acceleration>
+              <x>
+                <noise type="gaussian">
+                  <mean>0.0</mean>
+                  <stddev>1.7e-2</stddev>
+                  <bias_mean>0.1</bias_mean>
+                  <bias_stddev>0.001</bias_stddev>
+                </noise>
+              </x>
+              <y>
+                <noise type="gaussian">
+                  <mean>0.0</mean>
+                  <stddev>1.7e-2</stddev>
+                  <bias_mean>0.1</bias_mean>
+                  <bias_stddev>0.001</bias_stddev>
+                </noise>
+              </y>
+              <z>
+                <noise type="gaussian">
+                  <mean>0.0</mean>
+                  <stddev>1.7e-2</stddev>
+                  <bias_mean>0.1</bias_mean>
+                  <bias_stddev>0.001</bias_stddev>
+                </noise>
+              </z>
+            </linear_acceleration>
+          </imu>
+                
       <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
-        <topicName>trunk_imu</topicName>
-        <bodyName>imu_link</bodyName>
+        
+        <!--- can not convert to ros2 
         <updateRateHZ>1000.0</updateRateHZ>
         <gaussianNoise>0.0</gaussianNoise>
         <xyzOffset>0 0 0</xyzOffset>
         <rpyOffset>0 0 0</rpyOffset>
         <frameName>imu_link</frameName>
+        -->
+        
+        <frame_name>imu_link</frame_name>
+        <ros>
+           <namespace>/imu</namespace>
+           <remapping>~/out:=trunk_imu</remapping>
+        </ros>  
+        
       </plugin>
+      
+      
       <pose>0 0 0 0 0 0</pose>
     </sensor>
   </gazebo>
@@ -158,6 +229,7 @@
     </gazebo> -->
   <gazebo reference="depthCamera_link_left">
     <sensor name="camera_link_camera" type="depth">
+      <always_on>0</alwaysOn>
       <update_rate>20</update_rate>
       <camera>
         <horizontal_fov>1.047198</horizontal_fov>
@@ -170,30 +242,43 @@
           <near>0.05</near>
           <far>3</far>
         </clip>
+        
+        
       </camera>
-      <plugin filename="libgazebo_ros_openni_kinect.so" name="camera_link_controller">
+      <plugin filename="libgazebo_ros_camera.so" name="camera_link_controller">
+      
+        <frame_name>depthCamera_link_left</frame_name>
+        <camera_name>camera_link_ir</cameraName>
+        <update_rate>1.0</update_rate>
         <baseline>0.2</baseline>
-        <alwaysOn>true</alwaysOn>
-        <updateRate>1.0</updateRate>
-        <cameraName>camera_link_ir</cameraName>
-        <imageTopicName>/camera_link/color/image_raw</imageTopicName>
-        <cameraInfoTopicName>/camera_link/color/camera_info</cameraInfoTopicName>
-        <depthImageTopicName>/camera_link/depth/image_raw</depthImageTopicName>
-        <depthImageInfoTopicName>/camera_link/depth/camera_info</depthImageInfoTopicName>
-        <pointCloudTopicName>/camera_link/depth/points</pointCloudTopicName>
-        <frameName>depthCamera_link_left</frameName>
+
+        <ros>
+              <namespace>cam_1</namespace>
+              <remapping>camera_link_ir/image_raw:=/camera_link/color/image_raw</remapping>
+              <remapping>camera_link_ir/image_depth:=/camera_link/depth/image_raw</remapping>
+              <remapping>camera_link_ir/camera_info:=/camera_link/color/camera_info</remapping>
+              <remapping>camera_link_ir/camera_info_depth:=/camera_link/depth/camera_info</remapping>
+              <remapping>camera_link_ir/points:=/camera_link/depth/points</remapping>
+        </ros>
+      
+	<!-- can not find options in ROS2
         <pointCloudCutoff>0.5</pointCloudCutoff>
         <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
-        <distortionK1>0.00000001</distortionK1>
-        <distortionK2>0.00000001</distortionK2>
-        <distortionK3>0.00000001</distortionK3>
-        <distortionT1>0.00000001</distortionT1>
-        <distortionT2>0.00000001</distortionT2>
         <CxPrime>0</CxPrime>
-        <Cx>0</Cx>
-        <Cy>0</Cy>
-        <focalLength>0</focalLength>
-        <hackBaseline>0</hackBaseline>
+        -->
+        
+        <distortion_k1>0.00000001</distortion_k1>
+        <distortion_k2>0.00000001</distortion_k2>
+        <distortion_k3>0.00000001</distortion_k3>
+        <distortion_t1>0.00000001</distortion_t1>
+        <distortion_t2>0.00000001</distortion_t2>
+        
+        <P_fx>0</P_fx>
+        <P_cx>0</P_cx>
+        <P_cy>0</P_cy>
+        <hack_baseline>0</hack_baseline> 
+     
+                 
       </plugin>
     </sensor>
   </gazebo>
@@ -1348,6 +1433,7 @@
   <gazebo reference="camera_face">
     <!-- <material>Gazebo/Black</material> -->
     <sensor name="camera_face_camera" type="depth">
+      <always_on>true</always_on>
       <update_rate>16</update_rate>
       <camera>
         <horizontal_fov>2.094</horizontal_fov>
@@ -1361,30 +1447,40 @@
           <far>5</far>
         </clip>
       </camera>
-      <plugin filename="libgazebo_ros_openni_kinect.so" name="camera_face_controller">
+      <plugin filename="libgazebo_ros_camera.so" name="camera_face_controller">
+      
+      
+        <frame_name>camera_optical_left</frame_name>
+        <camera_name>camera_face_ir</cameraName>
+        <update_rate>0.0</update_rate>
         <baseline>0.025</baseline>
-        <alwaysOn>true</alwaysOn>
-        <updateRate>0.0</updateRate>
-        <cameraName>camera_face_ir</cameraName>
-        <imageTopicName>/camera_face/color/image_raw</imageTopicName>
-        <cameraInfoTopicName>/camera_face/color/camera_info</cameraInfoTopicName>
-        <depthImageTopicName>/camera_face/depth/image_raw</depthImageTopicName>
-        <depthImageInfoTopicName>/camera_face/depth/camera_info</depthImageInfoTopicName>
-        <!-- <pointCloudTopicName>/camera_${name}/depth/points</pointCloudTopicName> -->
-        <pointCloudTopicName>/cam1/point_cloud_face</pointCloudTopicName>
-        <frameName>camera_optical_face</frameName>
+
+        <ros>
+              <namespace>camera_face_ir</namespace>
+              <remapping>camera_face_ir/image_raw:=/camera_face/color/image_raw</remapping>
+              <remapping>camera_face_ir/image_depth:=/camera_face/depth/image_raw</remapping>
+              <remapping>camera_face_ir/camera_info:=/camera_face/color/camera_info</remapping>
+              <remapping>camera_face_ir/camera_info_depth:=/camera_face/depth/camera_info</remapping>
+              <remapping>camera_face_ir/points:=/cam1/point_cloud_face</remapping>
+        </ros>
+      
+	<!-- can not find options in ROS2
         <pointCloudCutoff>0.1</pointCloudCutoff>
         <pointCloudCutoffMax>1.5</pointCloudCutoffMax>
-        <distortionK1>0.0</distortionK1>
-        <distortionK2>0.0</distortionK2>
-        <distortionK3>0.0</distortionK3>
-        <distortionT1>0.0</distortionT1>
-        <distortionT2>0.0</distortionT2>
         <CxPrime>0</CxPrime>
-        <Cx>0.0045</Cx>
-        <Cy>0.0039</Cy>
-        <focalLength>0</focalLength>
-        <hackBaseline>0</hackBaseline>
+        -->
+        
+        <distortion_k1>0.0000000</distortion_k1>
+        <distortion_k2>0.0000000</distortion_k2>
+        <distortion_k3>0.0000000</distortion_k3>
+        <distortion_t1>0.0000000</distortion_t1>
+        <distortion_t2>0.0000000</distortion_t2>
+        
+        <P_fx>0</P_fx>
+        <P_cx>0.0045</P_cx>
+        <P_cy>0.0039</P_cy>
+        <hack_baseline>0</hack_baseline> 
+            
       </plugin>
     </sensor>
   </gazebo>
@@ -1422,6 +1518,7 @@
   <gazebo reference="camera_chin">
     <!-- <material>Gazebo/Black</material> -->
     <sensor name="camera_chin_camera" type="depth">
+      <always_on>0</always_on>
       <update_rate>16</update_rate>
       <camera>
         <horizontal_fov>2.094</horizontal_fov>
@@ -1435,30 +1532,39 @@
           <far>5</far>
         </clip>
       </camera>
-      <plugin filename="libgazebo_ros_openni_kinect.so" name="camera_chin_controller">
+      <plugin filename="libgazebo_ros_camera.so" name="camera_chin_controller">
+      
+        <frame_name>camera_optical_chin</frame_name>
+        <camera_name>camera_chin_ir</cameraName>
+        <update_rate>0.0</update_rate>
         <baseline>0.025</baseline>
-        <alwaysOn>true</alwaysOn>
-        <updateRate>0.0</updateRate>
-        <cameraName>camera_chin_ir</cameraName>
-        <imageTopicName>/camera_chin/color/image_raw</imageTopicName>
-        <cameraInfoTopicName>/camera_chin/color/camera_info</cameraInfoTopicName>
-        <depthImageTopicName>/camera_chin/depth/image_raw</depthImageTopicName>
-        <depthImageInfoTopicName>/camera_chin/depth/camera_info</depthImageInfoTopicName>
-        <!-- <pointCloudTopicName>/camera_${name}/depth/points</pointCloudTopicName> -->
-        <pointCloudTopicName>/cam2/point_cloud_chin</pointCloudTopicName>
-        <frameName>camera_optical_chin</frameName>
+
+        <ros>
+              <namespace>camera_chin_ir</namespace>
+              <remapping>camera_chin_ir/image_raw:=/camera_chin/color/image_raw</remapping>
+              <remapping>camera_chin_ir/image_depth:=/camera_chin/depth/image_raw</remapping>
+              <remapping>camera_chin_ir/camera_info:=/camera_chin/color/camera_info</remapping>
+              <remapping>camera_chin_ir/camera_info_depth:=/camera_chin/depth/camera_info</remapping>
+              <remapping>camera_chin_ir/points:=/cam2/point_cloud_chin</remapping>
+        </ros>
+      
+	<!-- can not find options in ROS2
         <pointCloudCutoff>0.1</pointCloudCutoff>
         <pointCloudCutoffMax>1.5</pointCloudCutoffMax>
-        <distortionK1>0.0</distortionK1>
-        <distortionK2>0.0</distortionK2>
-        <distortionK3>0.0</distortionK3>
-        <distortionT1>0.0</distortionT1>
-        <distortionT2>0.0</distortionT2>
         <CxPrime>0</CxPrime>
-        <Cx>0.0045</Cx>
-        <Cy>0.0039</Cy>
-        <focalLength>0</focalLength>
-        <hackBaseline>0</hackBaseline>
+        -->
+        
+        <distortion_k1>0.0000000</distortion_k1>
+        <distortion_k2>0.0000000</distortion_k2>
+        <distortion_k3>0.0000000</distortion_k3>
+        <distortion_t1>0.0000000</distortion_t1>
+        <distortion_t2>0.0000000</distortion_t2>
+        
+        <P_fx>0</P_fx>
+        <P_cx>0.0045</P_cx>
+        <P_cy>0.0039</P_cy>
+        <hack_baseline>0</hack_baseline> 
+            
       </plugin>
     </sensor>
   </gazebo>
@@ -1496,6 +1602,7 @@
   <gazebo reference="camera_left">
     <!-- <material>Gazebo/Black</material> -->
     <sensor name="camera_left_camera" type="depth">
+      <always_on>0</always_on>
       <update_rate>16</update_rate>
       <camera>
         <horizontal_fov>2.094</horizontal_fov>
@@ -1509,30 +1616,44 @@
           <far>5</far>
         </clip>
       </camera>
-      <plugin filename="libgazebo_ros_openni_kinect.so" name="camera_left_controller">
+      <plugin filename="libgazebo_ros_camera.so" name="camera_left_controller">
+      
+      
+        <frame_name>camera_optical_left</frame_name>
+        <camera_name>camera_left_ir</cameraName>
+        <update_rate>0.0</update_rate>
         <baseline>0.025</baseline>
-        <alwaysOn>true</alwaysOn>
-        <updateRate>0.0</updateRate>
-        <cameraName>camera_left_ir</cameraName>
-        <imageTopicName>/camera_left/color/image_raw</imageTopicName>
-        <cameraInfoTopicName>/camera_left/color/camera_info</cameraInfoTopicName>
-        <depthImageTopicName>/camera_left/depth/image_raw</depthImageTopicName>
-        <depthImageInfoTopicName>/camera_left/depth/camera_info</depthImageInfoTopicName>
-        <!-- <pointCloudTopicName>/camera_${name}/depth/points</pointCloudTopicName> -->
-        <pointCloudTopicName>/cam3/point_cloud_left</pointCloudTopicName>
-        <frameName>camera_optical_left</frameName>
+
+        <ros>
+              <namespace>camera_left_ir</namespace>
+              <remapping>camera_left_ir/image_raw:=/camera_left/color/image_raw</remapping>
+              <remapping>camera_left_ir/image_depth:=/camera_left/depth/image_raw</remapping>
+              <remapping>camera_left_ir/camera_info:=/camera_left/color/camera_info</remapping>
+              <remapping>camera_left_ir/camera_info_depth:=/camera_left/depth/camera_info</remapping>
+              <remapping>camera_left_ir/points:=/cam3/point_cloud_left</remapping>
+        </ros>
+      
+	<!-- can not find options in ROS2
         <pointCloudCutoff>0.1</pointCloudCutoff>
         <pointCloudCutoffMax>1.5</pointCloudCutoffMax>
-        <distortionK1>0.0</distortionK1>
-        <distortionK2>0.0</distortionK2>
-        <distortionK3>0.0</distortionK3>
-        <distortionT1>0.0</distortionT1>
-        <distortionT2>0.0</distortionT2>
         <CxPrime>0</CxPrime>
-        <Cx>0.0045</Cx>
-        <Cy>0.0039</Cy>
-        <focalLength>0</focalLength>
-        <hackBaseline>0</hackBaseline>
+        -->
+        
+        <distortion_k1>0.0000000</distortion_k1>
+        <distortion_k2>0.0000000</distortion_k2>
+        <distortion_k3>0.0000000</distortion_k3>
+        <distortion_t1>0.0000000</distortion_t1>
+        <distortion_t2>0.0000000</distortion_t2>
+        
+        <P_fx>0</P_fx>
+        <P_cx>0.0045</P_cx>
+        <P_cy>0.0039</P_cy>
+        <hack_baseline>0</hack_baseline> 
+        
+        
+        
+        
+            
       </plugin>
     </sensor>
   </gazebo>
@@ -1570,6 +1691,8 @@
   <gazebo reference="camera_right">
     <!-- <material>Gazebo/Black</material> -->
     <sensor name="camera_right_camera" type="depth">
+      <always_on>0</always_on>
+            
       <update_rate>16</update_rate>
       <camera>
         <horizontal_fov>2.094</horizontal_fov>
@@ -1583,30 +1706,41 @@
           <far>5</far>
         </clip>
       </camera>
-      <plugin filename="libgazebo_ros_openni_kinect.so" name="camera_right_controller">
+      <plugin filename="libgazebo_ros_camera.so" name="camera_right_controller">
+      
+      
+        <frame_name>camera_optical_right</frame_name>
+        <camera_name>camera_right_ir</cameraName>
+        <update_rate>0.0</update_rate>
         <baseline>0.025</baseline>
-        <alwaysOn>true</alwaysOn>
-        <updateRate>0.0</updateRate>
-        <cameraName>camera_right_ir</cameraName>
-        <imageTopicName>/camera_right/color/image_raw</imageTopicName>
-        <cameraInfoTopicName>/camera_right/color/camera_info</cameraInfoTopicName>
-        <depthImageTopicName>/camera_right/depth/image_raw</depthImageTopicName>
-        <depthImageInfoTopicName>/camera_right/depth/camera_info</depthImageInfoTopicName>
-        <!-- <pointCloudTopicName>/camera_${name}/depth/points</pointCloudTopicName> -->
-        <pointCloudTopicName>/cam4/point_cloud_right</pointCloudTopicName>
-        <frameName>camera_optical_right</frameName>
+
+        <ros>
+              <namespace>camera_right_ir</namespace>
+              <remapping>camera_right_ir/image_raw:=/camera_right/color/image_raw</remapping>
+              <remapping>camera_right_ir/image_depth:=/camera_right/depth/image_raw</remapping>
+              <remapping>camera_right_ir/camera_info:=/camera_right/color/camera_info</remapping>
+              <remapping>camera_right_ir/camera_info_depth:=/camera_right/depth/camera_info</remapping>
+              <remapping>camera_right_ir/points:=/cam4/point_cloud_right</remapping>
+        </ros>
+      
+	<!-- can not find options in ROS2
         <pointCloudCutoff>0.1</pointCloudCutoff>
         <pointCloudCutoffMax>1.5</pointCloudCutoffMax>
-        <distortionK1>0.0</distortionK1>
-        <distortionK2>0.0</distortionK2>
-        <distortionK3>0.0</distortionK3>
-        <distortionT1>0.0</distortionT1>
-        <distortionT2>0.0</distortionT2>
         <CxPrime>0</CxPrime>
-        <Cx>0.0045</Cx>
-        <Cy>0.0039</Cy>
-        <focalLength>0</focalLength>
-        <hackBaseline>0</hackBaseline>
+        -->
+        
+        <distortion_k1>0.0000000</distortion_k1>
+        <distortion_k2>0.0000000</distortion_k2>
+        <distortion_k3>0.0000000</distortion_k3>
+        <distortion_t1>0.0000000</distortion_t1>
+        <distortion_t2>0.0000000</distortion_t2>
+        
+        <P_fx>0</P_fx>
+        <P_cx>0.0045</P_cx>
+        <P_cy>0.0039</P_cy>
+        <hack_baseline>0</hack_baseline> 
+        
+           
       </plugin>
     </sensor>
   </gazebo>
@@ -1644,6 +1778,7 @@
   <gazebo reference="camera_rearDown">
     <!-- <material>Gazebo/Black</material> -->
     <sensor name="camera_rearDown_camera" type="depth">
+      <always_on>0</always_on>
       <update_rate>16</update_rate>
       <camera>
         <horizontal_fov>2.094</horizontal_fov>
@@ -1657,30 +1792,39 @@
           <far>5</far>
         </clip>
       </camera>
-      <plugin filename="libgazebo_ros_openni_kinect.so" name="camera_rearDown_controller">
+      <plugin filename="libgazebo_ros_camera.so" name="camera_rearDown_controller">
+      
+        <frame_name>camera_optical_rearDown</frame_name>
+        <camera_name>camera_rearDown_ir</cameraName>
+        <update_rate>0.0</update_rate>
         <baseline>0.025</baseline>
-        <alwaysOn>true</alwaysOn>
-        <updateRate>0.0</updateRate>
-        <cameraName>camera_rearDown_ir</cameraName>
-        <imageTopicName>/camera_rearDown/color/image_raw</imageTopicName>
-        <cameraInfoTopicName>/camera_rearDown/color/camera_info</cameraInfoTopicName>
-        <depthImageTopicName>/camera_rearDown/depth/image_raw</depthImageTopicName>
-        <depthImageInfoTopicName>/camera_rearDown/depth/camera_info</depthImageInfoTopicName>
-        <!-- <pointCloudTopicName>/camera_${name}/depth/points</pointCloudTopicName> -->
-        <pointCloudTopicName>/cam5/point_cloud_rearDown</pointCloudTopicName>
-        <frameName>camera_optical_rearDown</frameName>
+
+        <ros>
+              <namespace>cam_rear_down</namespace>
+              <remapping>camera_rearDown_ir/image_raw:=/camera_rearDown/color/image_raw</remapping>
+              <remapping>camera_rearDown_ir/image_depth:=/camera_rearDown/depth/image_raw</remapping>
+              <remapping>camera_rearDown_ir/camera_info:=/camera_rearDown/color/camera_info</remapping>
+              <remapping>camera_rearDown_ir/camera_info_depth:=/camera_rearDown/depth/camera_info</remapping>
+              <remapping>camera_rearDown_ir/points:=/cam5/point_cloud_rearDown</remapping>
+        </ros>
+      
+	<!-- can not find options in ROS2
         <pointCloudCutoff>0.1</pointCloudCutoff>
         <pointCloudCutoffMax>1.5</pointCloudCutoffMax>
-        <distortionK1>0.0</distortionK1>
-        <distortionK2>0.0</distortionK2>
-        <distortionK3>0.0</distortionK3>
-        <distortionT1>0.0</distortionT1>
-        <distortionT2>0.0</distortionT2>
         <CxPrime>0</CxPrime>
-        <Cx>0.0045</Cx>
-        <Cy>0.0039</Cy>
-        <focalLength>0</focalLength>
-        <hackBaseline>0</hackBaseline>
+        -->
+        
+        <distortion_k1>0.0000000</distortion_k1>
+        <distortion_k2>0.0000000</distortion_k2>
+        <distortion_k3>0.0000000</distortion_k3>
+        <distortion_t1>0.0000000</distortion_t1>
+        <distortion_t2>0.0000000</distortion_t2>
+        
+        <P_fx>0</P_fx>
+        <P_cx>0.0045</P_cx>
+        <P_cy>0.0039</P_cy>
+        <hack_baseline>0</hack_baseline> 
+           
       </plugin>
     </sensor>
   </gazebo>
