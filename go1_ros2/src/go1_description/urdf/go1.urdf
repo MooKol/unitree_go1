@@ -32,21 +32,26 @@
     <color rgba="1.0 1.0 1.0 1.0"/>
   </material>
   <!-- ros_control plugin -->
+  
+  
+  <!--
   <gazebo>
     <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros_control">
     
     <ros>
       <namespace>go1_gazebo</namespace>
     </ros>
-        
+        --> 
      <!--
       <robotNamespace>/go1_gazebo</robotNamespace>
       <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
       --> 
       
-      
+     <!-- 
     </plugin>
+   
   </gazebo>
+  -->
   <!-- Show the trajectory of trunk center. -->
   <gazebo>
     <plugin filename="libLinkPlot3DPlugin.so" name="3dplot">

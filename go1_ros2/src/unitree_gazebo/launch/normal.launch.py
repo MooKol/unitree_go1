@@ -73,11 +73,8 @@ def launch_setup(context, *args, **kwargs):
         output='screen'
     )
 
-
-    #return [robot_description_node, gzserver_cmd, gzclient_cmd, SetEnvironmentVariable("GAZEBO_MODEL_PATH", os.path.join(get_package_prefix("go1_description"), "share")), spawn_robot_node]
     #return [robot_description_node, gzclient_cmd, gzserver_cmd, SetEnvironmentVariable("GAZEBO_MODEL_PATH", os.path.join(get_package_prefix("go1_description"), "share")), spawn_robot_node]
-    #return [robot_description_node, gzclient_cmd, gzserver_cmd, SetEnvironmentVariable("GAZEBO_MODEL_PATH", os.path.join(get_package_prefix("go1_description"), "share"))]
-    return [robot_description_node, gzserver_cmd,  gzclient_cmd]
+    return [robot_description_node, gzclient_cmd, gzserver_cmd, spawn_robot_node]
 
 def generate_launch_description():
     wname_arg = DeclareLaunchArgument('wname', default_value='earth')

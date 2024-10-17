@@ -1,19 +1,22 @@
 <?xml version="1.0"?>
 <robot>
     <!-- ros_control plugin -->
+   <!--
     <gazebo>
         <plugin name="libgazebo_ros2_control" filename="libgazebo_ros2_control.so">
         <ros>
           <namespace>go1_gazebo</namespace>
         </ros>            
-            
+       -->      
             <!--
             <robotNamespace>/go1_gazebo/</robotNamespace>
             <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
             --> 
+        <!--
         </plugin>
-    </gazebo>
-
+    </gazebo> 
+    --> 
+    
     <!-- Show the trajectory of trunk center. -->
     <gazebo>
         <plugin name="3dplot" filename="libLinkPlot3DPlugin.so">
@@ -38,13 +41,14 @@
         </plugin>
     </gazebo> -->
 
+    <!--
     <gazebo>
         <plugin filename="libgazebo_ros_force.so" name="gazebo_ros_force">
             <bodyName>trunk</bodyName>
             <topicName>/apply_force/trunk</topicName>
         </plugin>
     </gazebo>
-
+--> 
     <gazebo reference="imu_link">
         <gravity>true</gravity>
         <sensor name="imu_sensor" type="imu">
@@ -270,7 +274,8 @@
     <gazebo reference="FR_calf">
         <sensor name="FR_foot_contact" type="contact">
         <update_rate>100</update_rate>
-        <plugin name="contactPlugin" filename="libunitreeFootContactPlugin.so"/>
+        <!--
+        <plugin name="contactPlugin" filename="libunitreeFootContactPlugin.so"/>--> 
         <contact>
             <collision>FR_calf_fixed_joint_lump__FR_foot_collision_1</collision>
         </contact>
@@ -279,7 +284,8 @@
     <gazebo reference="FL_calf">
         <sensor name="FL_foot_contact" type="contact">
         <update_rate>100</update_rate>
-        <plugin name="contactPlugin" filename="libunitreeFootContactPlugin.so"/>
+        <!--
+        <plugin name="contactPlugin" filename="libunitreeFootContactPlugin.so"/>--> 
         <contact>
             <collision>FL_calf_fixed_joint_lump__FL_foot_collision_1</collision>
         </contact>
@@ -288,7 +294,8 @@
     <gazebo reference="RR_calf">
         <sensor name="RR_foot_contact" type="contact">
         <update_rate>100</update_rate>
-        <plugin name="contactPlugin" filename="libunitreeFootContactPlugin.so"/>
+        <!--
+        <plugin name="contactPlugin" filename="libunitreeFootContactPlugin.so"/>--> 
         <contact>
             <collision>RR_calf_fixed_joint_lump__RR_foot_collision_1</collision>
         </contact>
@@ -297,7 +304,8 @@
     <gazebo reference="RL_calf">
         <sensor name="RL_foot_contact" type="contact">
         <update_rate>100</update_rate>
-        <plugin name="contactPlugin" filename="libunitreeFootContactPlugin.so"/>
+        <!--
+        <plugin name="contactPlugin" filename="libunitreeFootContactPlugin.so"/>--> s
         <contact>
             <collision>RL_calf_fixed_joint_lump__RL_foot_collision_1</collision>
         </contact>
