@@ -207,6 +207,7 @@
         </sensor>
     </gazebo> -->
 
+     <!--
   <gazebo reference="depthCamera_link_left">
     <sensor name="camera_link_camera" type="depth">
     
@@ -243,13 +244,13 @@
               <remapping>camera_link_ir/camera_info_depth:=/camera_link/depth/camera_info</remapping>
               <remapping>camera_link_ir/points:=/camera_link/depth/points</remapping>
         </ros>
-      
+          -->    
 	<!-- can not find options in ROS2
         <pointCloudCutoff>0.5</pointCloudCutoff>
         <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
         <CxPrime>0</CxPrime>
         -->
-        
+	<!--         
         <distortion_k1>0.00000001</distortion_k1>
         <distortion_k2>0.00000001</distortion_k2>
         <distortion_k3>0.00000001</distortion_k3>
@@ -263,7 +264,7 @@
       </plugin>
     </sensor>
   </gazebo>
-
+--> 
 
     <!-- Foot contacts. -->
     <gazebo reference="FR_calf">

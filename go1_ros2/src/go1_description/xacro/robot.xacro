@@ -9,7 +9,9 @@
     <xacro:include filename="$(find go1_description)/xacro/leg.xacro"/>
     <!-- <xacro:include filename="$(find go1_description)/xacro/stairs.xacro"/> -->
     <xacro:include filename="$(find go1_description)/xacro/gazebo.xacro"/>
-    <xacro:include filename="$(find go1_description)/xacro/depthCamera.xacro"/>
+    
+    
+    <!--<xacro:include filename="$(find go1_description)/xacro/depthCamera.xacro"/>--> 
     <xacro:include filename="$(find go1_description)/xacro/ultraSound.xacro"/>
     <!-- <xacro:include filename="$(find go1_gazebo)/launch/stairs.urdf.xacro"/> -->
 
@@ -99,6 +101,8 @@
     <xacro:leg name="RR" mirror="-1" mirror_dae="False"  front_hind="-1" front_hind_dae="False" />
     <xacro:leg name="RL" mirror="1"  mirror_dae="True"   front_hind="-1" front_hind_dae="False" />
 
+ 
+    <!--
     <xacro:depthCamera camID="1" name="face">
         <origin rpy="${PI} 0 0" xyz="0.2785 0.0125 0.0167"/>
     </xacro:depthCamera>
@@ -118,7 +122,9 @@
     <xacro:depthCamera camID="5" name="rearDown">
         <origin rpy="${PI} ${PI/2} 0" xyz="-0.0825 0.0125 -0.04365"/>
     </xacro:depthCamera>
-
+   --> 
+   
+   <!--
     <joint name="camera_laserscan_joint_left" type="fixed">
         <origin rpy="0 0.2618 0" xyz="0 0 0"/>
         <parent link="camera_left"/>
@@ -136,7 +142,8 @@
 
     <link name="camera_laserscan_link_right">
     </link>
-
+  --> 
+   
     <xacro:ultraSound name="left">
         <origin rpy="0 0.2618 ${PI/2}" xyz="-0.0535  0.0826 0.00868"/>
     </xacro:ultraSound>

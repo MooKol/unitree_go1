@@ -33,23 +33,6 @@ def launch_setup(context, *args, **kwargs):
     ).toxml()
 
 
-    """
-
-    ros_gz_sim = get_package_share_directory('ros_gz_sim')
-    gzserver_cmd = IncludeLaunchDescription(
-                        PythonLaunchDescriptionSource(
-                            os.path.join(ros_gz_sim, 'launch', 'gz_sim.launch.py')
-                        ),
-                launch_arguments={'gz_args': ['-r -s -v4 ', world_path], 'on_exit_shutdown': 'true'}.items())
-
-    gzclient_cmd = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(ros_gz_sim, 'launch', 'gz_sim.launch.py')
-        ),
-        launch_arguments={'gz_args': '-g -v4 '}.items()
-    )
-    """
-
     # Load URDF into parameter server
     robot_description_node = Node(
             package='robot_state_publisher',
@@ -93,7 +76,8 @@ def launch_setup(context, *args, **kwargs):
 
     #return [robot_description_node, gzserver_cmd, gzclient_cmd, SetEnvironmentVariable("GAZEBO_MODEL_PATH", os.path.join(get_package_prefix("go1_description"), "share")), spawn_robot_node]
     #return [robot_description_node, gzclient_cmd, gzserver_cmd, SetEnvironmentVariable("GAZEBO_MODEL_PATH", os.path.join(get_package_prefix("go1_description"), "share")), spawn_robot_node]
-    return [robot_description_node, gzclient_cmd, gzserver_cmd, SetEnvironmentVariable("GAZEBO_MODEL_PATH", os.path.join(get_package_prefix("go1_description"), "share"))]
+    #return [robot_description_node, gzclient_cmd, gzserver_cmd, SetEnvironmentVariable("GAZEBO_MODEL_PATH", os.path.join(get_package_prefix("go1_description"), "share"))]
+    return [robot_description_node, gzserver_cmd,  gzclient_cmd]
 
 def generate_launch_description():
     wname_arg = DeclareLaunchArgument('wname', default_value='earth')

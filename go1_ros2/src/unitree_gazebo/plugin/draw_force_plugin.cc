@@ -27,7 +27,7 @@ namespace gazebo
             this->visual_namespace = "visual/";
             
             // Set topic name
-            if (!_sdf->HasElement("topici_name"))
+            if (!_sdf->HasElement("topic_name"))
             {
                 RCLCPP_INFO(rclcpp::get_logger("UnitreeDrawForcePlugin"), "Force draw plugin missing <topicName>, defaults to /default_force_draw");
                 this->topic_name = "/default_force_draw";
