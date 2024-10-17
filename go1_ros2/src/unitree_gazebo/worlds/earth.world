@@ -21,6 +21,7 @@
                 </constraints>  
             </ode>
         </physics>
+        <ignition:model_plugin_loading_timeout>120.0</ignition:model_plugin_loading_timeout>
 
         <scene>
         <sky>

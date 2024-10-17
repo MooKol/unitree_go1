@@ -81,16 +81,6 @@ def launch_setup(context, *args, **kwargs):
     )
 
     spawn_robot_node = Node(
-        package='ros_gz_sim',
-        executable='create',
-        arguments=[
-            '-entity', 'go1_robot',
-            '-topic', 'robot_description'
-        ],
-        output='both'
-        )
-
-    spawn_robot_node = Node(
         package='gazebo_ros',
         executable='spawn_entity.py',
         arguments=[
@@ -102,7 +92,8 @@ def launch_setup(context, *args, **kwargs):
 
 
     #return [robot_description_node, gzserver_cmd, gzclient_cmd, SetEnvironmentVariable("GAZEBO_MODEL_PATH", os.path.join(get_package_prefix("go1_description"), "share")), spawn_robot_node]
-    return [robot_description_node, gzclient_cmd, gzserver_cmd, spawn_robot_node]
+    #return [robot_description_node, gzclient_cmd, gzserver_cmd, SetEnvironmentVariable("GAZEBO_MODEL_PATH", os.path.join(get_package_prefix("go1_description"), "share")), spawn_robot_node]
+    return [robot_description_node, gzclient_cmd, gzserver_cmd, SetEnvironmentVariable("GAZEBO_MODEL_PATH", os.path.join(get_package_prefix("go1_description"), "share"))]
 
 def generate_launch_description():
     wname_arg = DeclareLaunchArgument('wname', default_value='earth')
