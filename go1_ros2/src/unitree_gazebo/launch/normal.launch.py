@@ -108,7 +108,7 @@ def launch_setup(context, *args, **kwargs):
     """
 
     return [joint_publisher_node, robot_description_node, SetEnvironmentVariable("GAZEBO_MODEL_PATH", os.path.join(get_package_prefix("go1_description"), "share")), 
-            gzclient_cmd, gzserver_cmd, load_joint_state_controller, spawn_robot_node]
+            gzclient_cmd, gzserver_cmd, spawn_robot_node]
 
 def generate_launch_description():
     wname_arg = DeclareLaunchArgument('wname', default_value='earth')

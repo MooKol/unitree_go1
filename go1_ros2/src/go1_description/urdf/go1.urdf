@@ -2113,7 +2113,7 @@
   </ros2_control>
 
 
-  <ros2_control name="RR_thigh" type="system">
+      <ros2_control name="RR_thigh" type="system">
     <hardware>
       <plugin>gazebo_ros2_control/GazeboSystem</plugin>
     </hardware>
