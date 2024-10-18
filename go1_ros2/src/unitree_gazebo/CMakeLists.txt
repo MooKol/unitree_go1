@@ -5,6 +5,7 @@ project(unitree_gazebo)
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(gazebo_ros REQUIRED)
+find_package(gazebo_ros2_control REQUIRED)
 find_package(gazebo_dev REQUIRED)  # for Gazebo-specific headers and libraries
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)

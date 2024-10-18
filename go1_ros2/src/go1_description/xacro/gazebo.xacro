@@ -1,21 +1,11 @@
 <?xml version="1.0"?>
 <robot>
     <!-- ros_control plugin -->
-   <!--
     <gazebo>
-        <plugin name="libgazebo_ros2_control" filename="libgazebo_ros2_control.so">
-        <ros>
-          <namespace>go1_gazebo</namespace>
-        </ros>            
-       -->      
-            <!--
-            <robotNamespace>/go1_gazebo/</robotNamespace>
-            <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
-            --> 
-        <!--
-        </plugin>
-    </gazebo> 
-    --> 
+        <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+        <parameters>$(find go1_description)/config/ros_control.yaml</parameters>
+      </plugin>
+    </gazebo>
     
     <!-- Show the trajectory of trunk center. -->
     <gazebo>
@@ -211,7 +201,7 @@
         </sensor>
     </gazebo> -->
 
-     <!--
+     
   <gazebo reference="depthCamera_link_left">
     <sensor name="camera_link_camera" type="depth">
     
@@ -248,13 +238,13 @@
               <remapping>camera_link_ir/camera_info_depth:=/camera_link/depth/camera_info</remapping>
               <remapping>camera_link_ir/points:=/camera_link/depth/points</remapping>
         </ros>
-          -->    
+             
 	<!-- can not find options in ROS2
         <pointCloudCutoff>0.5</pointCloudCutoff>
         <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
         <CxPrime>0</CxPrime>
         -->
-	<!--         
+	      
         <distortion_k1>0.00000001</distortion_k1>
         <distortion_k2>0.00000001</distortion_k2>
         <distortion_k3>0.00000001</distortion_k3>
@@ -268,7 +258,7 @@
       </plugin>
     </sensor>
   </gazebo>
---> 
+
 
     <!-- Foot contacts. -->
     <gazebo reference="FR_calf">
@@ -315,30 +305,34 @@
     <!-- Visualization of Foot contacts. -->
     <gazebo reference="FR_foot">
         <visual>
+        <!--
             <plugin name="drawForcePlugin" filename="libunitreeDrawForcePlugin.so">
                 <topicName>FR_foot_contact</topicName>
-            </plugin>
+            </plugin>-->
         </visual>
     </gazebo>
     <gazebo reference="FL_foot">
         <visual>
+        <!--
             <plugin name="drawForcePlugin" filename="libunitreeDrawForcePlugin.so">
                 <topicName>FL_foot_contact</topicName>
-            </plugin>
+            </plugin>-->
         </visual>
     </gazebo>
     <gazebo reference="RR_foot">
         <visual>
+        <!--
             <plugin name="drawForcePlugin" filename="libunitreeDrawForcePlugin.so">
                 <topicName>RR_foot_contact</topicName>
-            </plugin>
+            </plugin>-->
         </visual>
     </gazebo>
     <gazebo reference="RL_foot">
         <visual>
+        <!--
             <plugin name="drawForcePlugin" filename="libunitreeDrawForcePlugin.so">
                 <topicName>RL_foot_contact</topicName>
-            </plugin>
+            </plugin>-->
         </visual>
     </gazebo>
 

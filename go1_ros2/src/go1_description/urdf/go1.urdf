@@ -34,24 +34,12 @@
   <!-- ros_control plugin -->
   
   
-  <!--
-  <gazebo>
-    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros_control">
-    
-    <ros>
-      <namespace>go1_gazebo</namespace>
-    </ros>
-        --> 
-     <!--
-      <robotNamespace>/go1_gazebo</robotNamespace>
-      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
-      --> 
-      
-     <!-- 
-    </plugin>
-   
+ <gazebo>
+        <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+        <parameters>$(find go1_description)/config/ros_control.yaml</parameters>
+      </plugin>
   </gazebo>
-  -->
+    
   <!-- Show the trajectory of trunk center. -->
   <gazebo>
     <plugin filename="libLinkPlot3DPlugin.so" name="3dplot">
@@ -92,10 +80,7 @@
       <visualize>true</visualize>
       <!--can not convert to ros2
 	      <topic>__default_topic__</topic>
-            -->
-            
-            
-            
+            -->       
           <imu>
             <angular_velocity>
               <x>
@@ -245,8 +230,7 @@
         </sensor>
     </gazebo> -->
     
-    
-      <!--
+
   <gazebo reference="depthCamera_link_left">
     <sensor name="camera_link_camera" type="depth">
       <always_on>0</alwaysOn>
@@ -280,13 +264,13 @@
               <remapping>camera_link_ir/camera_info_depth:=/camera_link/depth/camera_info</remapping>
               <remapping>camera_link_ir/points:=/camera_link/depth/points</remapping>
         </ros>
-        -->
+
 	<!-- can not find options in ROS2
         <pointCloudCutoff>0.5</pointCloudCutoff>
         <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
         <CxPrime>0</CxPrime>
         -->
-       <!--   
+
         <distortion_k1>0.00000001</distortion_k1>
         <distortion_k2>0.00000001</distortion_k2>
         <distortion_k3>0.00000001</distortion_k3>
@@ -302,7 +286,7 @@
       </plugin>
     </sensor>
   </gazebo>
-  --> 
+
   
   
   
@@ -1442,7 +1426,7 @@
   </transmission>
   
   
-  <!--
+
   <joint name="camera_joint_face" type="fixed">
     <origin rpy="3.141592653589793 0 0" xyz="0.2785 0.0125 0.0167"/>
     <parent link="trunk"/>
@@ -1474,13 +1458,13 @@
   </joint>
   <link name="camera_optical_face">
         </link>
-        --> 
+         
         
         
-    <!--
-  <gazebo reference="camera_face"> --> 
+
+  <gazebo reference="camera_face"> 
     <!-- <material>Gazebo/Black</material> -->
-      <!--
+
     <sensor name="camera_face_camera" type="depth">
       <always_on>true</always_on>
       <update_rate>16</update_rate>
@@ -1512,13 +1496,13 @@
               <remapping>camera_face_ir/camera_info_depth:=/camera_face/depth/camera_info</remapping>
               <remapping>camera_face_ir/points:=/cam1/point_cloud_face</remapping>
         </ros>
-      --> 
+
 	<!-- can not find options in ROS2
         <pointCloudCutoff>0.1</pointCloudCutoff>
         <pointCloudCutoffMax>1.5</pointCloudCutoffMax>
         <CxPrime>0</CxPrime>
         -->
-        <!--  
+
         <distortion_k1>0.0000000</distortion_k1>
         <distortion_k2>0.0000000</distortion_k2>
         <distortion_k3>0.0000000</distortion_k3>
@@ -1533,10 +1517,10 @@
       </plugin>
     </sensor>
   </gazebo>
-  --> 
+
   
   
-  <!--
+  
   <joint name="camera_joint_chin" type="fixed">
     <origin rpy="3.141592653589793 1.5707963267948966 0" xyz="0.2522 0.0125 -0.0436"/>
     <parent link="trunk"/>
@@ -1569,11 +1553,11 @@
   <link name="camera_optical_chin">
         </link>
         
-        -> 
-          <!--
-  <gazebo reference="camera_chin"> --> 
+        
+          
+  <gazebo reference="camera_chin"> 
     <!-- <material>Gazebo/Black</material> -->
-      <!--
+      
     <sensor name="camera_chin_camera" type="depth">
       <always_on>0</always_on>
       <update_rate>16</update_rate>
@@ -1604,7 +1588,7 @@
               <remapping>camera_chin_ir/camera_info_depth:=/camera_chin/depth/camera_info</remapping>
               <remapping>camera_chin_ir/points:=/cam2/point_cloud_chin</remapping>
         </ros>
-       --> 
+       
 	<!-- can not find options in ROS2
         <pointCloudCutoff>0.1</pointCloudCutoff>
         <pointCloudCutoffMax>1.5</pointCloudCutoffMax>
@@ -1628,7 +1612,7 @@
   
   
   
-  <!--
+  
   <joint name="camera_joint_left" type="fixed">
     <origin rpy="3.141592653589793 0.2618 1.5707963267948966" xyz="-0.066 0.082 -0.0176"/>
     <parent link="trunk"/>
@@ -1660,11 +1644,12 @@
   </joint>
   <link name="camera_optical_left">
         </link>
-       -->  
-     <!--
-  <gazebo reference="camera_left">--> 
+       
+
+
+  <gazebo reference="camera_left">
     <!-- <material>Gazebo/Black</material> -->
-      <!--
+      
     <sensor name="camera_left_camera" type="depth">
       <always_on>0</always_on>
       <update_rate>16</update_rate>
@@ -1696,13 +1681,13 @@
               <remapping>camera_left_ir/camera_info_depth:=/camera_left/depth/camera_info</remapping>
               <remapping>camera_left_ir/points:=/cam3/point_cloud_left</remapping>
         </ros>
-        --> 
+         
 	<!-- can not find options in ROS2
         <pointCloudCutoff>0.1</pointCloudCutoff>
         <pointCloudCutoffMax>1.5</pointCloudCutoffMax>
         <CxPrime>0</CxPrime>
         -->
-          <!--
+
         <distortion_k1>0.0000000</distortion_k1>
         <distortion_k2>0.0000000</distortion_k2>
         <distortion_k3>0.0000000</distortion_k3>
@@ -1721,9 +1706,9 @@
       </plugin>
     </sensor>
   </gazebo>
-  --> 
+
   
-  <!--
+  
   <joint name="camera_joint_right" type="fixed">
     <origin rpy="3.141592653589793 0.2618 -1.5707963267948966" xyz="-0.041 -0.082 -0.0176"/>
     <parent link="trunk"/>
@@ -1756,11 +1741,10 @@
   <link name="camera_optical_right">
         </link>
         
-        --> 
-          <!--
-  <gazebo reference="camera_right">-->
+       
+  <gazebo reference="camera_right">
     <!-- <material>Gazebo/Black</material> -->
-      <!--
+
     <sensor name="camera_right_camera" type="depth">
       <always_on>0</always_on>
             
@@ -1793,13 +1777,13 @@
               <remapping>camera_right_ir/camera_info_depth:=/camera_right/depth/camera_info</remapping>
               <remapping>camera_right_ir/points:=/cam4/point_cloud_right</remapping>
         </ros>
-      -->
+
 	<!-- can not find options in ROS2
         <pointCloudCutoff>0.1</pointCloudCutoff>
         <pointCloudCutoffMax>1.5</pointCloudCutoffMax>
         <CxPrime>0</CxPrime>
         -->
-          <!--
+          
         <distortion_k1>0.0000000</distortion_k1>
         <distortion_k2>0.0000000</distortion_k2>
         <distortion_k3>0.0000000</distortion_k3>
@@ -1815,10 +1799,10 @@
       </plugin>
     </sensor>
   </gazebo>
-  -->
+
   
   
-  <!--
+  
   <joint name="camera_joint_rearDown" type="fixed">
     <origin rpy="3.141592653589793 1.5707963267948966 0" xyz="-0.0825 0.0125 -0.04365"/>
     <parent link="trunk"/>
@@ -1851,13 +1835,13 @@
   <link name="camera_optical_rearDown">
         </link>
         
-        --> 
+       
         
-          <!--
-  <gazebo reference="camera_rearDown"> -->
+
+  <gazebo reference="camera_rearDown">
   
     <!-- <material>Gazebo/Black</material> -->
-    <!--
+
     <sensor name="camera_rearDown_camera" type="depth">
       <always_on>0</always_on>
       <update_rate>16</update_rate>
@@ -1888,13 +1872,13 @@
               <remapping>camera_rearDown_ir/camera_info_depth:=/camera_rearDown/depth/camera_info</remapping>
               <remapping>camera_rearDown_ir/points:=/cam5/point_cloud_rearDown</remapping>
         </ros>
-      --> 
+
 	<!-- can not find options in ROS2
         <pointCloudCutoff>0.1</pointCloudCutoff>
         <pointCloudCutoffMax>1.5</pointCloudCutoffMax>
         <CxPrime>0</CxPrime>
         -->
-          <!--
+
         <distortion_k1>0.0000000</distortion_k1>
         <distortion_k2>0.0000000</distortion_k2>
         <distortion_k3>0.0000000</distortion_k3>
@@ -1909,10 +1893,10 @@
       </plugin>
     </sensor>
   </gazebo>
-  --> 
+
   
   
-  <!--
+  
   <joint name="camera_laserscan_joint_left" type="fixed">
     <origin rpy="0 0.2618 0" xyz="0 0 0"/>
     <parent link="camera_left"/>
@@ -1928,7 +1912,7 @@
   <link name="camera_laserscan_link_right">
     </link>
     
-    -->
+   
   <joint name="ultraSound_joint_left" type="fixed">
     <origin rpy="0 0.2618 1.5707963267948966" xyz="-0.0535  0.0826 0.00868"/>
     <parent link="trunk"/>
@@ -2004,5 +1988,51 @@
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
   </link>
+  
+  
+  
+  <ros2_control name="FL_hip_controller" type="system">
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  </ros2_control>
+   <ros2_control name="FL_thigh_controller" type="system">
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  </ros2_control>
+   <ros2_control name="FL_calf_controller" type="system">
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  </ros2_control>
+  
+  <ros2_control name="FR_hip_controller" type="system">
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  </ros2_control>
+   <ros2_control name="FR_thigh_controller" type="system">
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  </ros2_control>
+   <ros2_control name="FR_calf_controller" type="system">
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  </ros2_control>  
+  
+  <ros2_control name="RL_hip_controller" type="system">
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  </ros2_control>
+   <ros2_control name="RL_thigh_controller" type="system">
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  </ros2_control>
+   <ros2_control name="RL_calf_controller" type="system">
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  </ros2_control>  
+  
+  <ros2_control name="RR_hip_controller" type="system">
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  </ros2_control>
+   <ros2_control name="RR_thigh_controller" type="system">
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  </ros2_control>
+   <ros2_control name="RR_calf_controller" type="system">
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  </ros2_control>   
+  
+  
+  
+  
 </robot>
 

@@ -29,6 +29,10 @@
     <exec_depend>gazebo_ros</exec_depend>
     <exec_depend>unitree_legged_msgs</exec_depend>
     <exec_depend>geometry_msgs</exec_depend>
+    <exec_depend>ros2_controllers</exec_depend>
+    <exec_depend>gazebo_ros2_control</exec_depend>
+    <exec_depend>ros2_control</exec_depend>
+    <exec_depend>ros2_controllers</exec_depend>
 
     <export>
         <!-- Gazebo plugin path -->
