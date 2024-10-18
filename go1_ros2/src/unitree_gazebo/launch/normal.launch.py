@@ -23,6 +23,11 @@ def launch_setup(context, *args, **kwargs):
     world_path = PathJoinSubstitution([FindPackageShare('unitree_gazebo'), 'worlds', wname_val + '.world'])
     #print(world_path.perform(context))
 
+    declare_ros_control_file = DeclareLaunchArgument(
+        "ros_control_file",
+        default_value=os.path.join(get_package_share_directory('go1_description'), "config/ros_control.yaml"),
+    )
+
     robot_description_path = os.path.join(
         get_package_share_directory('go1_description'),
         'xacro',
@@ -52,6 +57,20 @@ def launch_setup(context, *args, **kwargs):
         )
     gazebo_model_path = os.path.join(get_package_prefix("go1_description"), "share")
 
+
+
+    load_joint_trajectory_effort_controller = ExecuteProcess(
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
+             'joint_group_effort_controller'],
+        output='screen'
+    )
+
+    load_joint_state_controller = ExecuteProcess(
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
+             'joint_states_controller'],
+        output='screen',
+    )
+
     gazebo_ros_pkg = get_package_share_directory('gazebo_ros')
 
     # Launch Gazebo server (gzserver) with Gazebo Classic
@@ -79,7 +98,17 @@ def launch_setup(context, *args, **kwargs):
         output='screen'
     )
 
-    return [joint_publisher_node, robot_description_node, SetEnvironmentVariable("GAZEBO_MODEL_PATH", os.path.join(get_package_prefix("go1_description"), "share")), gzclient_cmd, gzserver_cmd, spawn_robot_node]
+    """
+
+    load_joint_state_broadcaster = ExecuteProcess(
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
+             'joint_state_broadcaster'],
+        output='screen'
+    )
+    """
+
+    return [joint_publisher_node, robot_description_node, SetEnvironmentVariable("GAZEBO_MODEL_PATH", os.path.join(get_package_prefix("go1_description"), "share")), 
+            gzclient_cmd, gzserver_cmd, load_joint_state_controller, spawn_robot_node]
 
 def generate_launch_description():
     wname_arg = DeclareLaunchArgument('wname', default_value='earth')

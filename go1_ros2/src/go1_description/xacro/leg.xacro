@@ -30,6 +30,20 @@
                 <limit effort="${hip_torque_max}" velocity="${hip_velocity_max}" lower="${-hip_position_max}" upper="${-hip_position_min}"/>
             </xacro:if>            
         </joint>
+        
+          <ros2_control name="${name}_hip" type="system">
+	    <hardware>
+	      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+	    </hardware>
+	    <joint name="${name}_hip_joint">
+	      <command_interface name="effort"/>
+	      <state_interface name="position"/>
+	      <state_interface name="velocity"/>
+	    </joint>
+	  </ros2_control>
+		
+        
+        
 
         <joint name="${name}_hip_rotor_joint" type="fixed">
             <xacro:if value="${(mirror_dae == False) and (front_hind_dae == True)}">
@@ -116,6 +130,22 @@
             <limit effort="${thigh_torque_max}" velocity="${thigh_velocity_max}" lower="${thigh_position_min}" upper="${thigh_position_max}"/>
         </joint>
 
+
+          <ros2_control name="${name}_thigh" type="system">
+	    <hardware>
+	      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+	    </hardware>
+	    <joint name="${name}_thigh_joint">
+	      <command_interface name="effort"/>
+	      <state_interface name="position"/>
+	      <state_interface name="velocity"/>
+	    </joint>
+	  </ros2_control>
+		
+		
+
+
+
         <joint name="${name}_thigh_rotor_joint" type="fixed">
             <origin rpy="0 0 0" xyz="${thigh_rotor_offset_x} ${thigh_rotor_offset_y*mirror} 0"/>
             <parent link="${name}_hip"/>
@@ -183,6 +213,19 @@
             <dynamics damping="${damping}" friction="${friction}"/>
             <limit effort="${calf_torque_max}" velocity="${calf_velocity_max}" lower="${calf_position_min}" upper="${calf_position_max}"/>
         </joint>
+        
+        
+        <ros2_control name="${name}_calf" type="system">
+	    <hardware>
+	      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+	    </hardware>
+	    <joint name="${name}_calf_joint">
+	      <command_interface name="effort"/>
+	      <state_interface name="position"/>
+	      <state_interface name="velocity"/>
+	    </joint>
+	  </ros2_control>
+		
 
         <joint name="${name}_calf_rotor_joint" type="fixed">
             <origin rpy="0 0 0" xyz="${calf_rotor_offset_x} ${calf_rotor_offset_y*mirror} 0"/>

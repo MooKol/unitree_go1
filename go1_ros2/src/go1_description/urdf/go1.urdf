@@ -1991,45 +1991,151 @@
   
   
   
-  <ros2_control name="FL_hip_controller" type="system">
+  
+  <ros2_control name="FL_hip" type="system">
+    <hardware>
       <plugin>gazebo_ros2_control/GazeboSystem</plugin>
-  </ros2_control>
-   <ros2_control name="FL_thigh_controller" type="system">
-      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
-  </ros2_control>
-   <ros2_control name="FL_calf_controller" type="system">
-      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name="FL_hip_joint">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
   </ros2_control>
   
-  <ros2_control name="FR_hip_controller" type="system">
-      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
-  </ros2_control>
-   <ros2_control name="FR_thigh_controller" type="system">
-      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
-  </ros2_control>
-   <ros2_control name="FR_calf_controller" type="system">
-      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
-  </ros2_control>  
   
-  <ros2_control name="RL_hip_controller" type="system">
+  <ros2_control name="FL_thigh" type="system">
+    <hardware>
       <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name="FL_thigh_joint">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
   </ros2_control>
-   <ros2_control name="RL_thigh_controller" type="system">
-      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
-  </ros2_control>
-   <ros2_control name="RL_calf_controller" type="system">
-      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
-  </ros2_control>  
   
-  <ros2_control name="RR_hip_controller" type="system">
+  
+    <ros2_control name="FL_calf" type="system">
+    <hardware>
       <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name="FL_calf_joint">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
   </ros2_control>
-   <ros2_control name="RR_thigh_controller" type="system">
+  
+  
+
+    <ros2_control name="FR_hip" type="system">
+    <hardware>
       <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name="FR_hip_joint">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
   </ros2_control>
-   <ros2_control name="RR_calf_controller" type="system">
+  
+
+    <ros2_control name="FR_thigh" type="system">
+    <hardware>
       <plugin>gazebo_ros2_control/GazeboSystem</plugin>
-  </ros2_control>   
+    </hardware>
+    <joint name="FR_thigh_joint">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+    <ros2_control name="FR_calf" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name="FR_calf_joint">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+
+    <ros2_control name="RL_hip" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name="RL_hip_joint">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+
+    <ros2_control name="RL_thigh" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name="RL_thigh_joint">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+
+    <ros2_control name="RL_calf" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name="RL_calf_joint">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+  
+  
+
+    <ros2_control name="RR_hip" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name="RR_hip_joint">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+
+  <ros2_control name="RR_thigh" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name="RR_thigh_joint">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+  
+  
+        <ros2_control name="RR_calf" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name="RR_calf_joint">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+    
   
   
   
