@@ -1,5 +1,22 @@
 <?xml version="1.0"?>
 <robot>
+
+    <gazebo>
+      <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+        <ros>
+            <remapping>odom:=odom/ground_truth</remapping>
+        </ros>
+
+        <body_name>base_link</body_name>
+        <frame_name>world</frame_name>
+        <update_rate>10.0</update_rate>
+        <xyz_offset>0 0 0</xyz_offset>
+        <rpy_offset>0 0 0</rpy_offset>
+        <gaussian_noise>0.01</gaussian_noise>
+    </plugin>
+    </gazebo>
+    
+    
     <!-- ros_control plugin -->
     <gazebo>
         <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
@@ -122,6 +139,8 @@
                   <namespace>/imu</namespace>
                   <remapping>~/out:=trunk_imu</remapping>
                 </ros>
+                <initial_orientation_as_reference>false</initial_orientation_as_reference>
+
             
             </plugin>
             <pose>0 0 0 0 0 0</pose>

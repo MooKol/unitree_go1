@@ -33,15 +33,15 @@ joint_group_effort_controller:
       - velocity
     
     gains:
-      FL_hip_joint: {p: 100.0, i: 0.0, d: 5.0, i_clamp: 2.5}
-      FL_thigh_joint: {p: 300.0, i: 0.0, d: 8.0, i_clamp: 2.5}
-      FL_calf_joint: {p: 300.0, i: 0.0, d: 8.0, i_clamp: 2.5}
-      FR_hip_joint: {p: 100.0, i: 0.0, d: 5.0, i_clamp: 2.5}
-      FR_thigh_joint: {p: 300.0, i: 0.0, d: 8.0, i_clamp: 2.5}
-      FR_calf_joint: {p: 300.0, i: 0.0, d: 8.0, i_clamp: 2.5}
-      RL_hip_joint: {p: 100.0, i: 0.0, d: 5.0, i_clamp: 2.5}
-      RL_thigh_joint: {p: 300.0, i: 0.0, d: 8.0, i_clamp: 2.5}
-      RL_calf_joint: {p: 300.0, i: 0.0, d: 8.0, i_clamp: 2.5}
-      RR_hip_joint: {p: 100.0, i: 0.0, d: 5.0, i_clamp: 2.5}
-      RR_thigh_joint: {p: 300.0, i: 0.0, d: 8.0, i_clamp: 2.5}
-      RR_calf_joint: {p: 300.0, i: 0.0, d: 8.0, i_clamp: 2.5}
+      FL_hip_joint: {p: 100.0, i: 0.0, d: 5.0, i_clamp: 2.5, ff_velocity_scale: 1.0}
+      FL_thigh_joint: {p: 300.0, i: 0.0, d: 8.0, i_clamp: 2.5, ff_velocity_scale: 1.0}
+      FL_calf_joint: {p: 300.0, i: 0.0, d: 8.0, i_clamp: 2.5, ff_velocity_scale: 1.0}
+      FR_hip_joint: {p: 100.0, i: 0.0, d: 5.0, i_clamp: 2.5, ff_velocity_scale: 1.0}
+      FR_thigh_joint: {p: 300.0, i: 0.0, d: 8.0, i_clamp: 2.5, ff_velocity_scale: 1.0}
+      FR_calf_joint: {p: 300.0, i: 0.0, d: 8.0, i_clamp: 2.5, ff_velocity_scale: 1.0}
+      RL_hip_joint: {p: 100.0, i: 0.0, d: 5.0, i_clamp: 2.5, ff_velocity_scale: 1.0}
+      RL_thigh_joint: {p: 300.0, i: 0.0, d: 8.0, i_clamp: 2.5, ff_velocity_scale: 1.0}
+      RL_calf_joint: {p: 300.0, i: 0.0, d: 8.0, i_clamp: 2.5, ff_velocity_scale: 1.0}
+      RR_hip_joint: {p: 100.0, i: 0.0, d: 5.0, i_clamp: 2.5, ff_velocity_scale: 1.0}
+      RR_thigh_joint: {p: 300.0, i: 0.0, d: 8.0, i_clamp: 2.5, ff_velocity_scale: 1.0}
+      RR_calf_joint: {p: 300.0, i: 0.0, d: 8.0, i_clamp: 2.5, ff_velocity_scale: 1.0}
