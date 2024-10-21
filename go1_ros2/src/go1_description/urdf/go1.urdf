@@ -233,7 +233,7 @@
 
   <gazebo reference="depthCamera_link_left">
     <sensor name="camera_link_camera" type="depth">
-      <always_on>0</alwaysOn>
+      <always_on>0</always_on>
       <update_rate>20</update_rate>
       <camera>
         <horizontal_fov>1.047198</horizontal_fov>
@@ -252,7 +252,7 @@
       <plugin filename="libgazebo_ros_camera.so" name="camera_link_controller">
       
         <frame_name>depthCamera_link_left</frame_name>
-        <camera_name>camera_link_ir</cameraName>
+        <camera_name>camera_link_ir</camera_name>
         <update_rate>1.0</update_rate>
         <baseline>0.2</baseline>
 
@@ -1484,7 +1484,7 @@
       
       
         <frame_name>camera_optical_left</frame_name>
-        <camera_name>camera_face_ir</cameraName>
+        <camera_name>camera_face_ir</camera_name>
         <update_rate>0.0</update_rate>
         <baseline>0.025</baseline>
 
@@ -1576,7 +1576,7 @@
       <plugin filename="libgazebo_ros_camera.so" name="camera_chin_controller">
       
         <frame_name>camera_optical_chin</frame_name>
-        <camera_name>camera_chin_ir</cameraName>
+        <camera_name>camera_chin_ir</camera_name>
         <update_rate>0.0</update_rate>
         <baseline>0.025</baseline>
 
@@ -1669,7 +1669,7 @@
       
       
         <frame_name>camera_optical_left</frame_name>
-        <camera_name>camera_left_ir</cameraName>
+        <camera_name>camera_left_ir</camera_name>
         <update_rate>0.0</update_rate>
         <baseline>0.025</baseline>
 
@@ -1765,7 +1765,7 @@
       
       
         <frame_name>camera_optical_right</frame_name>
-        <camera_name>camera_right_ir</cameraName>
+        <camera_name>camera_right_ir</camera_name>
         <update_rate>0.0</update_rate>
         <baseline>0.025</baseline>
 
@@ -1860,7 +1860,7 @@
       <plugin filename="libgazebo_ros_camera.so" name="camera_rearDown_controller">
       
         <frame_name>camera_optical_rearDown</frame_name>
-        <camera_name>camera_rearDown_ir</cameraName>
+        <camera_name>camera_rearDown_ir</camera_name>
         <update_rate>0.0</update_rate>
         <baseline>0.025</baseline>
 
