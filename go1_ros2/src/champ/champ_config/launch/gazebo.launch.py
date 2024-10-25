@@ -1,7 +1,7 @@
 import os
 
 import launch_ros
-from ament_index_python.packages import get_package_share_directory, get_package_prefix
+from ament_index_python.packages import get_package_share_directory
 from launch_ros.actions import Node
 
 from launch import LaunchDescription
@@ -13,7 +13,6 @@ from launch.actions import (
 from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command, LaunchConfiguration
-from launch.actions import SetEnvironmentVariable
 
 
 def generate_launch_description():
@@ -23,18 +22,18 @@ def generate_launch_description():
     base_frame = "base_link"
 
     config_pkg_share = launch_ros.substitutions.FindPackageShare(
-        package="go1_config"
-    ).find("go1_config")
+        package="champ_config"
+    ).find("champ_config")
     descr_pkg_share = launch_ros.substitutions.FindPackageShare(
-        package="go1_description"
-    ).find("go1_description")
+        package="champ_description"
+    ).find("champ_description")
     joints_config = os.path.join(config_pkg_share, "config/joints/joints.yaml")
     ros_control_config = os.path.join(
-        config_pkg_share, "/config/ros_control.yaml"
+        config_pkg_share, "/config/ros_control/ros_control.yaml"
     )
     gait_config = os.path.join(config_pkg_share, "config/gait/gait.yaml")
     links_config = os.path.join(config_pkg_share, "config/links/links.yaml")
-    default_model_path = os.path.join(descr_pkg_share, "xacro/robot.xacro")
+    default_model_path = os.path.join(descr_pkg_share, "urdf/champ.urdf.xacro")
     default_world_path = os.path.join(config_pkg_share, "worlds/default.world")
 
     declare_use_sim_time = DeclareLaunchArgument(
@@ -46,7 +45,7 @@ def generate_launch_description():
         "rviz", default_value="false", description="Launch rviz"
     )
     declare_robot_name = DeclareLaunchArgument(
-        "robot_name", default_value="go1", description="Robot name"
+        "robot_name", default_value="champ", description="Robot name"
     )
     declare_lite = DeclareLaunchArgument(
         "lite", default_value="false", description="Lite"
@@ -65,10 +64,10 @@ def generate_launch_description():
     )
     declare_world_init_x = DeclareLaunchArgument("world_init_x", default_value="0.0")
     declare_world_init_y = DeclareLaunchArgument("world_init_y", default_value="0.0")
-    declare_world_init_z = DeclareLaunchArgument("world_init_z", default_value="0.275")
     declare_world_init_heading = DeclareLaunchArgument(
-        "world_init_heading", default_value="0.0"
+        "world_init_heading", default_value="0.6"
     )
+
 
     bringup_ld = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -110,17 +109,14 @@ def generate_launch_description():
             "lite": LaunchConfiguration("lite"),
             "world_init_x": LaunchConfiguration("world_init_x"),
             "world_init_y": LaunchConfiguration("world_init_y"),
-            "world_init_z": LaunchConfiguration("world_init_z"),
             "world_init_heading": LaunchConfiguration("world_init_heading"),
             "gui": LaunchConfiguration("gui"),
             "close_loop_odom": "true",
         }.items(),
     )
 
-    set_env_var_gazebo = SetEnvironmentVariable("GAZEBO_MODEL_PATH", os.path.join(get_package_prefix("go1_description"), "share"))
-
     return LaunchDescription(
-        [   set_env_var_gazebo,
+        [
             declare_use_sim_time,
             declare_rviz,
             declare_robot_name,
@@ -130,7 +126,6 @@ def generate_launch_description():
             declare_gui,
             declare_world_init_x,
             declare_world_init_y,
-            declare_world_init_z,
             declare_world_init_heading,
             bringup_ld,
             gazebo_ld

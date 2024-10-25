@@ -25,7 +25,7 @@ def launch_setup(context, *args, **kwargs):
     world_path = PathJoinSubstitution([FindPackageShare('unitree_gazebo'), 'worlds', wname + '.world'])
     links_config = os.path.join(get_package_share_directory('go1_config'), "config/links/links.yaml")
 
-    robot_description = xacro.process_file(robot_description_path, mappings={'DEBUG': 'true'}).toxml()
+    robot_description = xacro.process_file(robot_description_path, mappings={'DEBUG': 'false'}).toxml()
     robot_description_node = Node(
             package='robot_state_publisher',
             executable='robot_state_publisher',
@@ -41,7 +41,7 @@ def launch_setup(context, *args, **kwargs):
     gzserver_cmd = LaunchDescription([
         ExecuteProcess(
             cmd=['gzserver', '--verbose', '-s',
-            'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so'],
+            'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so', world_path],
             output='screen'
         ),
     ])
@@ -118,7 +118,7 @@ def launch_setup(context, *args, **kwargs):
                         ]
 
 def generate_launch_description():
-    declare_wname = DeclareLaunchArgument('wname', default_value='earth')
+    declare_wname = DeclareLaunchArgument('wname', default_value='default')
     declare_rname = DeclareLaunchArgument('rname', default_value='go1')
 
     declare_world_init_x = DeclareLaunchArgument("world_init_x", default_value="0.0")
