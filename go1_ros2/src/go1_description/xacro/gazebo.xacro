@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <robot>
 
+   
     <gazebo>
       <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
         <ros>
@@ -18,6 +19,7 @@
     
     
     <!-- ros_control plugin -->
+    
     <gazebo>
         <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
         <parameters>$(find go1_description)/config/ros_control.yaml</parameters>
@@ -44,7 +46,7 @@
                 <link>FL_foot</link>
                 <pose>0 0 0 0 0 0</pose>
                 <material>Gazebo/Green</material>
-            </plot>
+            </plot>ss
         </plugin>
     </gazebo> -->
 

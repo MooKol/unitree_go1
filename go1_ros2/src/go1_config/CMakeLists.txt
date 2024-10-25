@@ -4,7 +4,7 @@ project(go1_config)
 find_package(ament_cmake REQUIRED)
 
 install(
-  DIRECTORY config  
+  DIRECTORY launch config maps worlds
   DESTINATION share/${PROJECT_NAME}
 )
 
