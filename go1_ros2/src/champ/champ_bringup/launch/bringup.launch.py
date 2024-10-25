@@ -11,7 +11,8 @@ from launch.actions import (
     ExecuteProcess,
     IncludeLaunchDescription,
     GroupAction,
-    RegisterEventHandler
+    RegisterEventHandler,
+    LogInfo
 )
 from launch.event_handlers.on_process_exit import OnProcessExit
 from launch.event_handlers.on_execution_complete import OnExecutionComplete
@@ -260,6 +261,16 @@ def generate_launch_description():
             state_estimator_node,
             base_to_footprint_ekf,
             footprint_to_odom_ekf,
-            rviz2
+            rviz2,
+            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration("joint_controller_topic")]),
+            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration("gazebo")]),
+            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration("publish_joint_states")]),
+            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration("publish_joint_control")]),
+            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration("publish_foot_contacts")]),
+            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration("joint_controller_topic")]),
+            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration('description_path')]),
+            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration('joints_map_path')]),
+            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration('links_map_path')]),
+            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration('gait_config_path')]),
         ]
     )

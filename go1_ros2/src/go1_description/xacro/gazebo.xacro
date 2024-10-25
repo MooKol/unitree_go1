@@ -8,7 +8,7 @@
             <remapping>odom:=odom/ground_truth</remapping>
         </ros>
 
-        <body_name>base</body_name>
+        <body_name>base_link</body_name>
         <frame_name>world</frame_name>
         <update_rate>10.0</update_rate>
         <xyz_offset>0 0 0</xyz_offset>
@@ -31,7 +31,7 @@
         <plugin name="3dplot" filename="libLinkPlot3DPlugin.so">
             <frequency>10</frequency>
             <plot>
-                <link>base</link>
+                <link>base_link</link>
                 <pose>0 0 0 0 0 0</pose>
                 <material>Gazebo/Yellow</material>
             </plot>
@@ -357,7 +357,7 @@
         </visual>
     </gazebo>
 
-    <gazebo reference="base">
+    <gazebo reference="base_link">
         <material>Gazebo/Green</material>
         <turnGravityOff>false</turnGravityOff>
     </gazebo>
