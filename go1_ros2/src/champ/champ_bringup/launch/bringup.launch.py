@@ -154,7 +154,9 @@ def generate_launch_description():
             "description_path": LaunchConfiguration("description_path"),
         }.items(),
     )
-
+    
+    robot_description_path = os.path.join(get_package_share_directory('go1_description'), 'xacro', 'robot.xacro')
+    import xacro
     quadruped_controller_node = Node(
         package="champ_base",
         executable="quadruped_controller_node",
@@ -166,7 +168,7 @@ def generate_launch_description():
             {"publish_joint_control": LaunchConfiguration("publish_joint_control")},
             {"publish_foot_contacts": LaunchConfiguration("publish_foot_contacts")},
             {"joint_controller_topic": LaunchConfiguration("joint_controller_topic")},
-            {"urdf": Command(['xacro ', LaunchConfiguration('description_path')])},
+            {"urdf": xacro.process_file(robot_description_path, mappings={'DEBUG': 'false'}).toxml()},
             LaunchConfiguration('joints_map_path'),
             LaunchConfiguration('links_map_path'),
             LaunchConfiguration('gait_config_path'),
