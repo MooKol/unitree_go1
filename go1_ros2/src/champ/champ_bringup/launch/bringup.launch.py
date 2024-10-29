@@ -264,15 +264,5 @@ def generate_launch_description():
             base_to_footprint_ekf,
             footprint_to_odom_ekf,
             rviz2,
-            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration("joint_controller_topic")]),
-            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration("gazebo")]),
-            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration("publish_joint_states")]),
-            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration("publish_joint_control")]),
-            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration("publish_foot_contacts")]),
-            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration("joint_controller_topic")]),
-            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration('description_path')]),
-            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration('joints_map_path')]),
-            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration('links_map_path')]),
-            LogInfo(msg=['xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',LaunchConfiguration('gait_config_path')]),
         ]
     )
