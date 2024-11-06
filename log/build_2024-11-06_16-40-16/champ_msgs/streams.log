@@ -1,0 +1,449 @@
+[0.029s] Invoking command in '/home/go1/Desktop/workspace/unitree_go1/build/champ_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/go1/Desktop/workspace/unitree_go1/unitree-go2-ros2/champ/champ_msgs -DCMAKE_INSTALL_PREFIX=/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs
+[0.088s] -- The C compiler identification is GNU 11.4.0
+[0.150s] -- The CXX compiler identification is GNU 11.4.0
+[0.157s] -- Detecting C compiler ABI info
+[0.231s] -- Detecting C compiler ABI info - done
+[0.243s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.244s] -- Detecting C compile features
+[0.244s] -- Detecting C compile features - done
+[0.247s] -- Detecting CXX compiler ABI info
+[0.331s] -- Detecting CXX compiler ABI info - done
+[0.342s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.342s] -- Detecting CXX compile features
+[0.343s] -- Detecting CXX compile features - done
+[0.347s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.491s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.588s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.594s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.604s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.656s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.698s] -- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)
+[0.730s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.017s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.221s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.471s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.489s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.491s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.512s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.512s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.512s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.512s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.529s] -- Found PythonExtra: .so  
+[1.579s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.584s] -- Configuring done
+[1.620s] -- Generating done
+[1.622s] -- Build files have been written to: /home/go1/Desktop/workspace/unitree_go1/build/champ_msgs
+[1.630s] Invoked command in '/home/go1/Desktop/workspace/unitree_go1/build/champ_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/go1/Desktop/workspace/unitree_go1/unitree-go2-ros2/champ/champ_msgs -DCMAKE_INSTALL_PREFIX=/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs
+[1.631s] Invoking command in '/home/go1/Desktop/workspace/unitree_go1/build/champ_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/go1/Desktop/workspace/unitree_go1/build/champ_msgs -- -j16 -l16
+[1.669s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.678s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.686s] [  2%] Built target ament_cmake_python_copy_champ_msgs
+[1.881s] running egg_info
+[1.881s] creating champ_msgs.egg-info
+[1.882s] writing champ_msgs.egg-info/PKG-INFO
+[1.882s] writing dependency_links to champ_msgs.egg-info/dependency_links.txt
+[1.882s] writing top-level names to champ_msgs.egg-info/top_level.txt
+[1.882s] writing manifest file 'champ_msgs.egg-info/SOURCES.txt'
+[1.883s] reading manifest file 'champ_msgs.egg-info/SOURCES.txt'
+[1.884s] writing manifest file 'champ_msgs.egg-info/SOURCES.txt'
+[1.908s] [  2%] Built target ament_cmake_python_build_champ_msgs_egg
+[2.121s] [  2%] Built target champ_msgs__cpp
+[2.141s] [  3%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.141s] [  4%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.147s] [  5%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.175s] [  7%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_generator_c.dir/rosidl_generator_c/champ_msgs/msg/detail/imu__functions.c.o[0m
+[2.176s] [  7%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_generator_c.dir/rosidl_generator_c/champ_msgs/msg/detail/velocities__functions.c.o[0m
+[2.176s] [  8%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_generator_c.dir/rosidl_generator_c/champ_msgs/msg/detail/pose__functions.c.o[0m
+[2.176s] [  9%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_generator_c.dir/rosidl_generator_c/champ_msgs/msg/detail/pid__functions.c.o[0m
+[2.178s] [ 10%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_generator_c.dir/rosidl_generator_c/champ_msgs/msg/detail/joints__functions.c.o[0m
+[2.178s] [ 12%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_generator_c.dir/rosidl_generator_c/champ_msgs/msg/detail/contacts_stamped__functions.c.o[0m
+[2.178s] [ 13%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_generator_c.dir/rosidl_generator_c/champ_msgs/msg/detail/point_array__functions.c.o[0m
+[2.178s] [ 13%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_generator_c.dir/rosidl_generator_c/champ_msgs/msg/detail/point__functions.c.o[0m
+[2.178s] [ 14%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_generator_c.dir/rosidl_generator_c/champ_msgs/msg/detail/contacts__functions.c.o[0m
+[2.238s] [ 15%] [32m[1mLinking C shared library libchamp_msgs__rosidl_generator_c.so[0m
+[2.276s] [ 15%] Built target champ_msgs__rosidl_generator_c
+[2.287s] [ 18%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.287s] [ 18%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.287s] [ 18%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.449s] [ 21%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/champ_msgs/msg/point__type_support.cpp.o[0m
+[2.450s] [ 21%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/champ_msgs/msg/contacts__type_support.cpp.o[0m
+[2.451s] [ 22%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/champ_msgs/msg/joints__type_support.cpp.o[0m
+[2.452s] [ 23%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/champ_msgs/msg/imu__type_support.cpp.o[0m
+[2.452s] [ 24%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/champ_msgs/msg/pid__type_support.cpp.o[0m
+[2.452s] [ 25%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/champ_msgs/msg/velocities__type_support.cpp.o[0m
+[2.452s] [ 26%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/champ_msgs/msg/pose__type_support.cpp.o[0m
+[2.452s] [ 27%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/champ_msgs/msg/point_array__type_support.cpp.o[0m
+[2.452s] [ 28%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/champ_msgs/msg/contacts_stamped__type_support.cpp.o[0m
+[2.646s] [ 30%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/champ_msgs/msg/detail/velocities__type_support.cpp.o[0m
+[2.646s] [ 30%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/champ_msgs/msg/detail/imu__type_support.cpp.o[0m
+[2.647s] [ 31%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/champ_msgs/msg/detail/pid__type_support.cpp.o[0m
+[2.789s] [ 32%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/champ_msgs/msg/detail/point__type_support.cpp.o[0m
+[2.796s] [ 33%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/champ_msgs/msg/detail/point_array__type_support.cpp.o[0m
+[2.812s] [ 34%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/champ_msgs/msg/detail/joints__type_support.cpp.o[0m
+[2.812s] [ 35%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/champ_msgs/msg/detail/contacts__type_support.cpp.o[0m
+[2.812s] [ 36%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/champ_msgs/msg/velocities__type_support.cpp.o[0m
+[2.818s] [ 38%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/champ_msgs/msg/detail/contacts_stamped__type_support.cpp.o[0m
+[2.818s] [ 38%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/champ_msgs/msg/pid__type_support.cpp.o[0m
+[2.823s] [ 40%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/champ_msgs/msg/detail/pose__type_support.cpp.o[0m
+[2.835s] [ 41%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/champ_msgs/msg/imu__type_support.cpp.o[0m
+[2.845s] [ 42%] [32m[1mLinking CXX shared library libchamp_msgs__rosidl_typesupport_cpp.so[0m
+[2.857s] [ 43%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/champ_msgs/msg/point__type_support.cpp.o[0m
+[2.868s] [ 44%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/champ_msgs/msg/point_array__type_support.cpp.o[0m
+[2.880s] [ 45%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/champ_msgs/msg/joints__type_support.cpp.o[0m
+[2.884s] [ 46%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/champ_msgs/msg/detail/dds_fastrtps/velocities__type_support.cpp.o[0m
+[2.904s] [ 47%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/champ_msgs/msg/detail/dds_fastrtps/pid__type_support.cpp.o[0m
+[2.917s] [ 47%] Built target champ_msgs__rosidl_typesupport_cpp
+[2.930s] [ 48%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/champ_msgs/msg/contacts__type_support.cpp.o[0m
+[2.931s] [ 49%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/champ_msgs/msg/detail/dds_fastrtps/imu__type_support.cpp.o[0m
+[2.944s] [ 50%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/champ_msgs/msg/contacts_stamped__type_support.cpp.o[0m
+[2.989s] [ 51%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/champ_msgs/msg/detail/dds_fastrtps/point__type_support.cpp.o[0m
+[2.989s] [ 52%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/champ_msgs/msg/pose__type_support.cpp.o[0m
+[3.000s] [ 53%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/champ_msgs/msg/detail/velocities__type_support_c.cpp.o[0m
+[3.039s] [ 54%] [32m[1mLinking CXX shared library libchamp_msgs__rosidl_typesupport_c.so[0m
+[3.088s] [ 55%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/champ_msgs/msg/detail/velocities__type_support.c.o[0m
+[3.116s] [ 55%] Built target champ_msgs__rosidl_typesupport_c
+[3.138s] [ 56%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/champ_msgs/msg/detail/pid__type_support.c.o[0m
+[3.149s] [ 57%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/champ_msgs/msg/detail/imu__type_support.c.o[0m
+[3.183s] [ 58%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/champ_msgs/msg/detail/point__type_support.c.o[0m
+[3.186s] [ 60%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/champ_msgs/msg/detail/dds_fastrtps/point_array__type_support.cpp.o[0m
+[3.196s] [ 61%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/champ_msgs/msg/detail/point_array__type_support.c.o[0m
+[3.196s] [ 62%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/champ_msgs/msg/detail/pid__type_support_c.cpp.o[0m
+[3.210s] [ 63%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/champ_msgs/msg/detail/imu__type_support_c.cpp.o[0m
+[3.243s] [ 64%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/champ_msgs/msg/detail/dds_fastrtps/joints__type_support.cpp.o[0m
+[3.250s] [ 65%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/champ_msgs/msg/detail/joints__type_support.c.o[0m
+[3.312s] [ 66%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/champ_msgs/msg/detail/contacts__type_support.c.o[0m
+[3.324s] [ 67%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/champ_msgs/msg/detail/contacts_stamped__type_support.c.o[0m
+[3.337s] [ 68%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/champ_msgs/msg/detail/point__type_support_c.cpp.o[0m
+[3.353s] [ 69%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/champ_msgs/msg/detail/pose__type_support.c.o[0m
+[3.377s] [ 70%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/champ_msgs/msg/detail/point_array__type_support_c.cpp.o[0m
+[3.380s] [ 71%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/champ_msgs/msg/detail/dds_fastrtps/contacts__type_support.cpp.o[0m
+[3.384s] [ 72%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/champ_msgs/msg/detail/joints__type_support_c.cpp.o[0m
+[3.401s] [ 73%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/champ_msgs/msg/detail/contacts__type_support_c.cpp.o[0m
+[3.411s] [ 74%] [32m[1mLinking C shared library libchamp_msgs__rosidl_typesupport_introspection_c.so[0m
+[3.431s] [ 75%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/champ_msgs/msg/detail/contacts_stamped__type_support_c.cpp.o[0m
+[3.450s] [ 76%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/champ_msgs/msg/detail/pose__type_support_c.cpp.o[0m
+[3.453s] [ 77%] [32m[1mLinking CXX shared library libchamp_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[3.479s] [ 77%] Built target champ_msgs__rosidl_typesupport_introspection_c
+[3.479s] [ 78%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/champ_msgs/msg/detail/dds_fastrtps/contacts_stamped__type_support.cpp.o[0m
+[3.490s] [ 80%] [32mBuilding CXX object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/champ_msgs/msg/detail/dds_fastrtps/pose__type_support.cpp.o[0m
+[3.622s] [ 80%] Built target champ_msgs__rosidl_typesupport_introspection_cpp
+[3.861s] [ 81%] [32m[1mLinking CXX shared library libchamp_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[3.894s] [ 82%] [32m[1mLinking CXX shared library libchamp_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.926s] [ 82%] Built target champ_msgs__rosidl_typesupport_fastrtps_c
+[3.958s] [ 82%] Built target champ_msgs__rosidl_typesupport_fastrtps_cpp
+[3.977s] [ 82%] Built target champ_msgs
+[3.998s] [ 83%] [34m[1mGenerating Python code for ROS interfaces[0m
+[4.628s] [ 83%] Built target champ_msgs__py
+[4.649s] [ 90%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_generator_py.dir/rosidl_generator_py/champ_msgs/msg/_contacts_s.c.o[0m
+[4.649s] [ 90%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_generator_py.dir/rosidl_generator_py/champ_msgs/msg/_imu_s.c.o[0m
+[4.649s] [ 90%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_generator_py.dir/rosidl_generator_py/champ_msgs/msg/_pid_s.c.o[0m
+[4.649s] [ 90%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_generator_py.dir/rosidl_generator_py/champ_msgs/msg/_point_array_s.c.o[0m
+[4.649s] [ 90%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_generator_py.dir/rosidl_generator_py/champ_msgs/msg/_contacts_stamped_s.c.o[0m
+[4.649s] [ 90%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_generator_py.dir/rosidl_generator_py/champ_msgs/msg/_joints_s.c.o[0m
+[4.649s] [ 90%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_generator_py.dir/rosidl_generator_py/champ_msgs/msg/_point_s.c.o[0m
+[4.649s] [ 91%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_generator_py.dir/rosidl_generator_py/champ_msgs/msg/_velocities_s.c.o[0m
+[4.651s] [ 92%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_generator_py.dir/rosidl_generator_py/champ_msgs/msg/_pose_s.c.o[0m
+[4.780s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/champ_msgs/libchamp_msgs__rosidl_generator_py.so[0m
+[4.821s] [ 93%] Built target champ_msgs__rosidl_generator_py
+[4.844s] [ 96%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/champ_msgs/_champ_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[4.844s] [ 96%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/champ_msgs/_champ_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.844s] [ 96%] [32mBuilding C object CMakeFiles/champ_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/champ_msgs/_champ_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.952s] [100%] [32m[1mLinking C shared library rosidl_generator_py/champ_msgs/champ_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.952s] [100%] [32m[1mLinking C shared library rosidl_generator_py/champ_msgs/champ_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.952s] [100%] [32m[1mLinking C shared library rosidl_generator_py/champ_msgs/champ_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.992s] [100%] Built target champ_msgs__rosidl_typesupport_c__pyext
+[4.992s] [100%] Built target champ_msgs__rosidl_typesupport_fastrtps_c__pyext
+[4.993s] [100%] Built target champ_msgs__rosidl_typesupport_introspection_c__pyext
+[5.005s] Invoked command in '/home/go1/Desktop/workspace/unitree_go1/build/champ_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/go1/Desktop/workspace/unitree_go1/build/champ_msgs -- -j16 -l16
+[5.217s] Invoking command in '/home/go1/Desktop/workspace/unitree_go1/build/champ_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/go1/Desktop/workspace/unitree_go1/build/champ_msgs
+[5.225s] -- Install configuration: ""
+[5.225s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/ament_index/resource_index/rosidl_interfaces/champ_msgs
+[5.225s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs
+[5.225s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg
+[5.225s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail
+[5.225s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point__type_support.h
+[5.225s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/imu__struct.h
+[5.225s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point__functions.h
+[5.226s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/imu__type_support.h
+[5.226s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point_array__functions.c
+[5.226s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/imu__functions.h
+[5.226s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pid__functions.h
+[5.226s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/velocities__type_support.h
+[5.226s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/velocities__functions.c
+[5.226s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts__type_support.h
+[5.226s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pose__type_support.h
+[5.226s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/imu__functions.c
+[5.226s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/joints__functions.c
+[5.227s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point_array__struct.h
+[5.227s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts__struct.h
+[5.227s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pose__struct.h
+[5.227s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts_stamped__struct.h
+[5.227s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts_stamped__functions.h
+[5.227s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point_array__functions.h
+[5.227s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/joints__struct.h
+[5.227s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/joints__type_support.h
+[5.227s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point__struct.h
+[5.228s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pid__functions.c
+[5.228s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pid__struct.h
+[5.228s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point__functions.c
+[5.228s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pid__type_support.h
+[5.228s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pose__functions.h
+[5.228s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pose__functions.c
+[5.228s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/velocities__struct.h
+[5.228s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts__functions.h
+[5.228s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/velocities__functions.h
+[5.228s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts__functions.c
+[5.229s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point_array__type_support.h
+[5.229s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/joints__functions.h
+[5.229s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts_stamped__functions.c
+[5.229s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts_stamped__type_support.h
+[5.229s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/rosidl_generator_c__visibility_control.h
+[5.229s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/pid.h
+[5.229s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/contacts.h
+[5.229s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/joints.h
+[5.229s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/velocities.h
+[5.230s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/contacts_stamped.h
+[5.230s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/point.h
+[5.230s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/imu.h
+[5.230s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/pose.h
+[5.230s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/point_array.h
+[5.230s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/environment/library_path.sh
+[5.230s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/environment/library_path.dsv
+[5.230s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/lib/libchamp_msgs__rosidl_generator_c.so
+[5.231s] -- Set runtime path of "/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/lib/libchamp_msgs__rosidl_generator_c.so" to ""
+[5.231s] -- Up-to-date: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs
+[5.231s] -- Up-to-date: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg
+[5.231s] -- Up-to-date: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail
+[5.231s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/imu__rosidl_typesupport_fastrtps_c.h
+[5.231s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/velocities__rosidl_typesupport_fastrtps_c.h
+[5.231s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/joints__rosidl_typesupport_fastrtps_c.h
+[5.231s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts_stamped__rosidl_typesupport_fastrtps_c.h
+[5.231s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point_array__rosidl_typesupport_fastrtps_c.h
+[5.232s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pid__rosidl_typesupport_fastrtps_c.h
+[5.232s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pose__rosidl_typesupport_fastrtps_c.h
+[5.232s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point__rosidl_typesupport_fastrtps_c.h
+[5.232s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts__rosidl_typesupport_fastrtps_c.h
+[5.232s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.232s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/lib/libchamp_msgs__rosidl_typesupport_fastrtps_c.so
+[5.232s] -- Set runtime path of "/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/lib/libchamp_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[5.232s] -- Up-to-date: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs
+[5.233s] -- Up-to-date: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg
+[5.233s] -- Up-to-date: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail
+[5.233s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts__rosidl_typesupport_introspection_c.h
+[5.233s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/imu__rosidl_typesupport_introspection_c.h
+[5.233s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts_stamped__type_support.c
+[5.233s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/joints__rosidl_typesupport_introspection_c.h
+[5.233s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts_stamped__rosidl_typesupport_introspection_c.h
+[5.233s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/velocities__rosidl_typesupport_introspection_c.h
+[5.233s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point_array__rosidl_typesupport_introspection_c.h
+[5.233s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point_array__type_support.c
+[5.233s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/imu__type_support.c
+[5.234s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/joints__type_support.c
+[5.234s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pose__rosidl_typesupport_introspection_c.h
+[5.234s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pid__rosidl_typesupport_introspection_c.h
+[5.234s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/velocities__type_support.c
+[5.234s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point__type_support.c
+[5.234s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pid__type_support.c
+[5.234s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point__rosidl_typesupport_introspection_c.h
+[5.234s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts__type_support.c
+[5.234s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pose__type_support.c
+[5.235s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.235s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/lib/libchamp_msgs__rosidl_typesupport_introspection_c.so
+[5.235s] -- Set runtime path of "/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/lib/libchamp_msgs__rosidl_typesupport_introspection_c.so" to ""
+[5.235s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/lib/libchamp_msgs__rosidl_typesupport_c.so
+[5.235s] -- Set runtime path of "/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/lib/libchamp_msgs__rosidl_typesupport_c.so" to ""
+[5.235s] -- Up-to-date: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs
+[5.235s] -- Up-to-date: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg
+[5.235s] -- Up-to-date: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail
+[5.235s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pid__struct.hpp
+[5.236s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point__struct.hpp
+[5.236s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point_array__builder.hpp
+[5.236s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/imu__traits.hpp
+[5.236s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts__traits.hpp
+[5.236s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pid__traits.hpp
+[5.236s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pose__struct.hpp
+[5.236s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/imu__struct.hpp
+[5.236s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/velocities__struct.hpp
+[5.236s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point_array__struct.hpp
+[5.237s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/imu__builder.hpp
+[5.237s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pose__traits.hpp
+[5.237s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point_array__traits.hpp
+[5.237s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/velocities__builder.hpp
+[5.237s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/joints__builder.hpp
+[5.237s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts__builder.hpp
+[5.237s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts__struct.hpp
+[5.237s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point__traits.hpp
+[5.237s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/joints__struct.hpp
+[5.238s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/joints__traits.hpp
+[5.238s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pose__builder.hpp
+[5.238s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts_stamped__builder.hpp
+[5.238s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pid__builder.hpp
+[5.238s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts_stamped__struct.hpp
+[5.238s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point__builder.hpp
+[5.238s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/velocities__traits.hpp
+[5.238s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts_stamped__traits.hpp
+[5.238s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/velocities.hpp
+[5.239s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/joints.hpp
+[5.239s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/point.hpp
+[5.239s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/point_array.hpp
+[5.239s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/imu.hpp
+[5.239s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/pid.hpp
+[5.239s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/contacts_stamped.hpp
+[5.239s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/pose.hpp
+[5.239s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/contacts.hpp
+[5.239s] -- Up-to-date: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs
+[5.239s] -- Up-to-date: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg
+[5.240s] -- Up-to-date: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail
+[5.240s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pose__rosidl_typesupport_fastrtps_cpp.hpp
+[5.240s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/dds_fastrtps
+[5.240s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts__rosidl_typesupport_fastrtps_cpp.hpp
+[5.240s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point__rosidl_typesupport_fastrtps_cpp.hpp
+[5.240s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/velocities__rosidl_typesupport_fastrtps_cpp.hpp
+[5.240s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point_array__rosidl_typesupport_fastrtps_cpp.hpp
+[5.240s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[5.240s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pid__rosidl_typesupport_fastrtps_cpp.hpp
+[5.240s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/joints__rosidl_typesupport_fastrtps_cpp.hpp
+[5.241s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/imu__rosidl_typesupport_fastrtps_cpp.hpp
+[5.241s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[5.241s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/lib/libchamp_msgs__rosidl_typesupport_fastrtps_cpp.so
+[5.241s] -- Set runtime path of "/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/lib/libchamp_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[5.241s] -- Up-to-date: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs
+[5.241s] -- Up-to-date: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg
+[5.241s] -- Up-to-date: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail
+[5.241s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point__type_support.cpp
+[5.241s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/imu__rosidl_typesupport_introspection_cpp.hpp
+[5.242s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pid__rosidl_typesupport_introspection_cpp.hpp
+[5.242s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pose__rosidl_typesupport_introspection_cpp.hpp
+[5.242s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/velocities__rosidl_typesupport_introspection_cpp.hpp
+[5.242s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/imu__type_support.cpp
+[5.242s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/velocities__type_support.cpp
+[5.242s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point__rosidl_typesupport_introspection_cpp.hpp
+[5.242s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts__rosidl_typesupport_introspection_cpp.hpp
+[5.242s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/joints__rosidl_typesupport_introspection_cpp.hpp
+[5.242s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts_stamped__type_support.cpp
+[5.243s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts__type_support.cpp
+[5.243s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point_array__type_support.cpp
+[5.243s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pid__type_support.cpp
+[5.243s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/joints__type_support.cpp
+[5.243s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/pose__type_support.cpp
+[5.243s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/contacts_stamped__rosidl_typesupport_introspection_cpp.hpp
+[5.243s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/include/champ_msgs/champ_msgs/msg/detail/point_array__rosidl_typesupport_introspection_cpp.hpp
+[5.243s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/lib/libchamp_msgs__rosidl_typesupport_introspection_cpp.so
+[5.244s] -- Set runtime path of "/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/lib/libchamp_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[5.244s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/lib/libchamp_msgs__rosidl_typesupport_cpp.so
+[5.244s] -- Set runtime path of "/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/lib/libchamp_msgs__rosidl_typesupport_cpp.so" to ""
+[5.244s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/environment/pythonpath.sh
+[5.244s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/environment/pythonpath.dsv
+[5.244s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs-0.1.0-py3.10.egg-info
+[5.245s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs-0.1.0-py3.10.egg-info/SOURCES.txt
+[5.245s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs-0.1.0-py3.10.egg-info/top_level.txt
+[5.245s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs-0.1.0-py3.10.egg-info/dependency_links.txt
+[5.245s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs-0.1.0-py3.10.egg-info/PKG-INFO
+[5.245s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs
+[5.245s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/_champ_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[5.245s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/champ_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.245s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/champ_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.246s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/_champ_msgs_s.ep.rosidl_typesupport_c.c
+[5.246s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/libchamp_msgs__rosidl_generator_py.so
+[5.246s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/_champ_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[5.246s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/__init__.py
+[5.246s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg
+[5.246s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_point_array_s.c
+[5.246s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_contacts_stamped.py
+[5.246s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_imu.py
+[5.246s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_contacts_s.c
+[5.247s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_pid.py
+[5.247s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_velocities.py
+[5.247s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_point.py
+[5.247s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_imu_s.c
+[5.247s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_point_array.py
+[5.247s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_joints_s.c
+[5.247s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_contacts.py
+[5.247s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_velocities_s.c
+[5.247s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_pose.py
+[5.248s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_pid_s.c
+[5.248s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/__init__.py
+[5.248s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_point_s.c
+[5.248s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_joints.py
+[5.248s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_pose_s.c
+[5.248s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_contacts_stamped_s.c
+[5.248s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/champ_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.280s] Listing '/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs'...
+[5.280s] Compiling '/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/__init__.py'...
+[5.280s] Listing '/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg'...
+[5.281s] Compiling '/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/__init__.py'...
+[5.281s] Compiling '/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_contacts.py'...
+[5.281s] Compiling '/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_contacts_stamped.py'...
+[5.281s] Compiling '/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_imu.py'...
+[5.281s] Compiling '/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_joints.py'...
+[5.281s] Compiling '/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_pid.py'...
+[5.281s] Compiling '/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_point.py'...
+[5.281s] Compiling '/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_point_array.py'...
+[5.281s] Compiling '/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_pose.py'...
+[5.281s] Compiling '/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/msg/_velocities.py'...
+[5.284s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/champ_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.284s] -- Set runtime path of "/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/champ_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[5.285s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/champ_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.285s] -- Set runtime path of "/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/champ_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[5.285s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/champ_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.286s] -- Set runtime path of "/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/local/lib/python3.10/dist-packages/champ_msgs/champ_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[5.286s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/lib/libchamp_msgs__rosidl_generator_py.so
+[5.286s] -- Set runtime path of "/home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/lib/libchamp_msgs__rosidl_generator_py.so" to ""
+[5.286s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/msg/Velocities.idl
+[5.286s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/msg/PID.idl
+[5.287s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/msg/Imu.idl
+[5.287s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/msg/Point.idl
+[5.287s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/msg/PointArray.idl
+[5.287s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/msg/Joints.idl
+[5.287s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/msg/Contacts.idl
+[5.287s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/msg/ContactsStamped.idl
+[5.287s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/msg/Pose.idl
+[5.287s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/msg/Velocities.msg
+[5.288s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/msg/PID.msg
+[5.288s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/msg/Imu.msg
+[5.288s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/msg/Point.msg
+[5.288s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/msg/PointArray.msg
+[5.288s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/msg/Joints.msg
+[5.288s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/msg/Contacts.msg
+[5.288s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/msg/ContactsStamped.msg
+[5.289s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/msg/Pose.msg
+[5.289s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/ament_index/resource_index/package_run_dependencies/champ_msgs
+[5.289s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/ament_index/resource_index/parent_prefix_path/champ_msgs
+[5.289s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/environment/ament_prefix_path.sh
+[5.289s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/environment/ament_prefix_path.dsv
+[5.289s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/environment/path.sh
+[5.289s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/environment/path.dsv
+[5.289s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/local_setup.bash
+[5.290s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/local_setup.sh
+[5.290s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/local_setup.zsh
+[5.290s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/local_setup.dsv
+[5.290s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/package.dsv
+[5.290s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/ament_index/resource_index/packages/champ_msgs
+[5.290s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/export_champ_msgs__rosidl_generator_cExport.cmake
+[5.290s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/export_champ_msgs__rosidl_generator_cExport-noconfig.cmake
+[5.291s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/export_champ_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[5.291s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/export_champ_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[5.291s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/champ_msgs__rosidl_typesupport_introspection_cExport.cmake
+[5.291s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/champ_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.291s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/champ_msgs__rosidl_typesupport_cExport.cmake
+[5.291s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/champ_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[5.291s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/export_champ_msgs__rosidl_generator_cppExport.cmake
+[5.292s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/export_champ_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.292s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/export_champ_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[5.292s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/champ_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[5.292s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/champ_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.292s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/champ_msgs__rosidl_typesupport_cppExport.cmake
+[5.292s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/champ_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[5.292s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/export_champ_msgs__rosidl_generator_pyExport.cmake
+[5.293s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/export_champ_msgs__rosidl_generator_pyExport-noconfig.cmake
+[5.293s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/rosidl_cmake-extras.cmake
+[5.293s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.293s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.293s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[5.293s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[5.293s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.294s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.294s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/champ_msgsConfig.cmake
+[5.294s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/cmake/champ_msgsConfig-version.cmake
+[5.294s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_msgs/share/champ_msgs/package.xml
+[5.296s] Invoked command in '/home/go1/Desktop/workspace/unitree_go1/build/champ_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/go1/Desktop/workspace/unitree_go1/build/champ_msgs

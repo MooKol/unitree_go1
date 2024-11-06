@@ -1,0 +1,66 @@
+[0.024s] Invoking command in '/home/go1/Desktop/workspace/unitree_go1/build/go2_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/go1/Desktop/workspace/unitree_go1/unitree-go2-ros2/robots/configs/go2_config -DCMAKE_INSTALL_PREFIX=/home/go1/Desktop/workspace/unitree_go1/install/go2_config
+[0.075s] -- The C compiler identification is GNU 11.4.0
+[0.134s] -- The CXX compiler identification is GNU 11.4.0
+[0.141s] -- Detecting C compiler ABI info
+[0.213s] -- Detecting C compiler ABI info - done
+[0.220s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.220s] -- Detecting C compile features
+[0.220s] -- Detecting C compile features - done
+[0.223s] -- Detecting CXX compiler ABI info
+[0.303s] -- Detecting CXX compiler ABI info - done
+[0.312s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.312s] -- Detecting CXX compile features
+[0.313s] -- Detecting CXX compile features - done
+[0.317s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.461s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.622s] -- Configuring done
+[0.626s] -- Generating done
+[0.627s] -- Build files have been written to: /home/go1/Desktop/workspace/unitree_go1/build/go2_config
+[0.632s] Invoked command in '/home/go1/Desktop/workspace/unitree_go1/build/go2_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/go1/Desktop/workspace/unitree_go1/unitree-go2-ros2/robots/configs/go2_config -DCMAKE_INSTALL_PREFIX=/home/go1/Desktop/workspace/unitree_go1/install/go2_config
+[0.634s] Invoking command in '/home/go1/Desktop/workspace/unitree_go1/build/go2_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/go1/Desktop/workspace/unitree_go1/build/go2_config -- -j16 -l16
+[0.671s] Invoked command in '/home/go1/Desktop/workspace/unitree_go1/build/go2_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/go1/Desktop/workspace/unitree_go1/build/go2_config -- -j16 -l16
+[0.702s] Invoking command in '/home/go1/Desktop/workspace/unitree_go1/build/go2_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/go1/Desktop/workspace/unitree_go1/build/go2_config
+[0.710s] -- Install configuration: ""
+[0.710s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/launch
+[0.710s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/launch/slam.launch.py
+[0.710s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/launch/gazebo_velodyne.launch.py
+[0.710s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/launch/gazebo.launch.py
+[0.710s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/launch/navigate.launch.py
+[0.711s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/launch/bringup.launch.py
+[0.711s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/config
+[0.711s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/config/links
+[0.711s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/config/links/links.yaml
+[0.711s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/config/autonomy
+[0.711s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/config/autonomy/slam.yaml
+[0.711s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/config/autonomy/navigation.yaml
+[0.711s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/config/joints
+[0.711s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/config/joints/joints.yaml
+[0.711s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/config/gait
+[0.711s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/config/gait/gait.yaml
+[0.714s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/config/ros_control
+[0.714s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/config/ros_control/ros_control.yaml
+[0.714s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/maps
+[0.714s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/maps/map.yaml
+[0.714s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/maps/playground.pgm
+[0.715s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/maps/playground.yaml
+[0.715s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/maps/map.pgm
+[0.722s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/worlds
+[0.722s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/worlds/default.world
+[0.722s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/worlds/outdoor.world
+[0.722s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/worlds/playground.world
+[0.722s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/ament_index/resource_index/package_run_dependencies/go2_config
+[0.722s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/ament_index/resource_index/parent_prefix_path/go2_config
+[0.722s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/environment/ament_prefix_path.sh
+[0.723s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/environment/ament_prefix_path.dsv
+[0.723s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/environment/path.sh
+[0.723s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/environment/path.dsv
+[0.723s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/local_setup.bash
+[0.723s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/local_setup.sh
+[0.723s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/local_setup.zsh
+[0.723s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/local_setup.dsv
+[0.723s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/package.dsv
+[0.723s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/ament_index/resource_index/packages/go2_config
+[0.723s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/cmake/go2_configConfig.cmake
+[0.723s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/cmake/go2_configConfig-version.cmake
+[0.723s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/go2_config/share/go2_config/package.xml
+[0.751s] Invoked command in '/home/go1/Desktop/workspace/unitree_go1/build/go2_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/go1/Desktop/workspace/unitree_go1/build/go2_config

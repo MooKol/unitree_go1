@@ -1,0 +1,42 @@
+[0.025s] Invoking command in '/home/go1/Desktop/workspace/unitree_go1/build/champ_teleop': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/go1/Desktop/workspace/unitree_go1/unitree-go2-ros2/champ_teleop -DCMAKE_INSTALL_PREFIX=/home/go1/Desktop/workspace/unitree_go1/install/champ_teleop
+[0.076s] -- The C compiler identification is GNU 11.4.0
+[0.138s] -- The CXX compiler identification is GNU 11.4.0
+[0.144s] -- Detecting C compiler ABI info
+[0.217s] -- Detecting C compiler ABI info - done
+[0.229s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.229s] -- Detecting C compile features
+[0.230s] -- Detecting C compile features - done
+[0.233s] -- Detecting CXX compiler ABI info
+[0.316s] -- Detecting CXX compiler ABI info - done
+[0.322s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.322s] -- Detecting CXX compile features
+[0.323s] -- Detecting CXX compile features - done
+[0.326s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.473s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.635s] -- Configuring done
+[0.639s] -- Generating done
+[0.640s] -- Build files have been written to: /home/go1/Desktop/workspace/unitree_go1/build/champ_teleop
+[0.644s] Invoked command in '/home/go1/Desktop/workspace/unitree_go1/build/champ_teleop' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/go1/Desktop/workspace/unitree_go1/unitree-go2-ros2/champ_teleop -DCMAKE_INSTALL_PREFIX=/home/go1/Desktop/workspace/unitree_go1/install/champ_teleop
+[0.645s] Invoking command in '/home/go1/Desktop/workspace/unitree_go1/build/champ_teleop': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/go1/Desktop/workspace/unitree_go1/build/champ_teleop -- -j16 -l16
+[0.684s] Invoked command in '/home/go1/Desktop/workspace/unitree_go1/build/champ_teleop' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/go1/Desktop/workspace/unitree_go1/build/champ_teleop -- -j16 -l16
+[0.709s] Invoking command in '/home/go1/Desktop/workspace/unitree_go1/build/champ_teleop': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/go1/Desktop/workspace/unitree_go1/build/champ_teleop
+[0.719s] -- Install configuration: ""
+[0.719s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_teleop/share/champ_teleop/launch
+[0.719s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_teleop/share/champ_teleop/launch/teleop.launch.py
+[0.720s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_teleop/lib/champ_teleop/champ_teleop.py
+[0.720s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_teleop/share/ament_index/resource_index/package_run_dependencies/champ_teleop
+[0.722s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_teleop/share/ament_index/resource_index/parent_prefix_path/champ_teleop
+[0.722s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_teleop/share/champ_teleop/environment/ament_prefix_path.sh
+[0.723s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_teleop/share/champ_teleop/environment/ament_prefix_path.dsv
+[0.723s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_teleop/share/champ_teleop/environment/path.sh
+[0.723s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_teleop/share/champ_teleop/environment/path.dsv
+[0.723s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_teleop/share/champ_teleop/local_setup.bash
+[0.724s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_teleop/share/champ_teleop/local_setup.sh
+[0.724s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_teleop/share/champ_teleop/local_setup.zsh
+[0.724s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_teleop/share/champ_teleop/local_setup.dsv
+[0.724s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_teleop/share/champ_teleop/package.dsv
+[0.724s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_teleop/share/ament_index/resource_index/packages/champ_teleop
+[0.724s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_teleop/share/champ_teleop/cmake/champ_teleopConfig.cmake
+[0.725s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_teleop/share/champ_teleop/cmake/champ_teleopConfig-version.cmake
+[0.725s] -- Installing: /home/go1/Desktop/workspace/unitree_go1/install/champ_teleop/share/champ_teleop/package.xml
+[0.726s] Invoked command in '/home/go1/Desktop/workspace/unitree_go1/build/champ_teleop' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/go1/Desktop/workspace/unitree_go1/build/champ_teleop
