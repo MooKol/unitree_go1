@@ -48,6 +48,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/go1/Desktop/workspace/unitree_go1/unitree-go2-ros2/robots/configs/go2_config/config"
     "/home/go1/Desktop/workspace/unitree_go1/unitree-go2-ros2/robots/configs/go2_config/maps"
     "/home/go1/Desktop/workspace/unitree_go1/unitree-go2-ros2/robots/configs/go2_config/worlds"
+    "/home/go1/Desktop/workspace/unitree_go1/unitree-go2-ros2/robots/configs/go2_config/rviz"
     )
 endif()
 

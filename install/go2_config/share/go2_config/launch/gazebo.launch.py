@@ -37,6 +37,9 @@ def generate_launch_description():
     default_model_path = os.path.join(descr_pkg_share, "xacro/robot.xacro")
     default_world_path = os.path.join(config_pkg_share, "worlds/default.world")
 
+    default_rviz_path = os.path.join(config_pkg_share, "rviz/go2_viewer.rviz")
+    print(default_rviz_path)
+    print("dssssssssssssssssssss\n")
     declare_use_sim_time = DeclareLaunchArgument(
         "use_sim_time",
         default_value="true",
@@ -85,6 +88,7 @@ def generate_launch_description():
             "links_map_path": links_config,
             "gait_config_path": gait_config,
             "use_sim_time": LaunchConfiguration("use_sim_time"),
+            "rviz_path": default_rviz_path,
             "robot_name": LaunchConfiguration("robot_name"),
             "gazebo": "true",
             "lite": LaunchConfiguration("lite"),

@@ -10,6 +10,7 @@
     <xacro:include filename="$(find go2_description)/xacro/gazebo.xacro"/>
     <xacro:include filename="$(find go2_description)/xacro/depthCamera.xacro"/>
     <xacro:include filename="$(find go2_description)/xacro/ultraSound.xacro"/>
+    <xacro:include filename="$(find go2_description)/xacro/lidar.xacro"/>
     <!-- <xacro:include filename="$(find go2_gazebo)/launch/stairs.urdf.xacro"/> -->
 
     <!-- <xacro:stairs stairs="15" xpos="0" ypos="0" zpos="0" /> -->
@@ -92,6 +93,33 @@
             </geometry>
         </collision>
     </link>
+    
+    
+    <!-- MOUNTING FRAME -->
+    <joint name="mount_joint" type="fixed">
+        <origin xyz="0.179 0.0 0.091" rpy="0 0 0" />
+        <parent link="base_link"/>
+        <child link="mount_frame"/>
+    </joint>
+
+    <link name="mount_frame">
+      <visual>
+        <origin xyz="-0.252 -0.19 0.121" rpy="0 0 0" />
+        <geometry>
+            <mesh filename="file://$(find go2_description)/meshes/mounting_frame.obj"/>
+        </geometry>
+      </visual>
+      <!-- <inertial>
+         <mass value="0.033"/>
+         <origin xyz="0 0 0.091" rpy="0 0 0" />
+         <inertia ixx="0.000241148" ixy="0" ixz="0" iyy="0.000241148" iyz="0" izz="0.000264"/>
+      </inertial> -->
+    </link>
+
+    <!-- Ouster OS1-32 Lidar -->
+    <xacro:lidar name="os1_sensor" hz="10" samples="512" min_range="0.1" max_range="90" >
+        <origin xyz="0.007 0.0 0.134" rpy="0.0 0 1.5708" />
+    </xacro:lidar>
 
     <xacro:leg name="rf" mirror="-1" mirror_dae= "False" front_hind="1"  front_hind_dae="True"  />
     <xacro:leg name="lf" mirror="1"  mirror_dae="True"   front_hind="1"  front_hind_dae="True"  />
