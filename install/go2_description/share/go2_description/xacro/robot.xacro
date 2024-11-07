@@ -11,6 +11,7 @@
     <xacro:include filename="$(find go2_description)/xacro/depthCamera.xacro"/>
     <xacro:include filename="$(find go2_description)/xacro/ultraSound.xacro"/>
     <xacro:include filename="$(find go2_description)/xacro/lidar.xacro"/>
+    <xacro:include filename="$(find go2_description)/xacro/_d435i.urdf.xacro"/>
     <!-- <xacro:include filename="$(find go2_gazebo)/launch/stairs.urdf.xacro"/> -->
 
     <!-- <xacro:stairs stairs="15" xpos="0" ypos="0" zpos="0" /> -->
@@ -120,6 +121,13 @@
     <xacro:lidar name="os1_sensor" hz="10" samples="512" min_range="0.1" max_range="90" >
         <origin xyz="0.007 0.0 0.134" rpy="0.0 0 1.5708" />
     </xacro:lidar>
+    
+
+    <!-- Realsense d435i Camera -->  
+    <xacro:sensor_d435i parent="mount_frame" use_nominal_extrinsics="true" >
+    	<origin xyz="0.076 0.0 0.062" rpy="0 0 0" />
+    </xacro:sensor_d435i>
+
 
     <xacro:leg name="rf" mirror="-1" mirror_dae= "False" front_hind="1"  front_hind_dae="True"  />
     <xacro:leg name="lf" mirror="1"  mirror_dae="True"   front_hind="1"  front_hind_dae="True"  />
