@@ -1,4 +1,3 @@
-/home/go1/Desktop/workspace/unitree_go1/install/champ_bringup/share/champ_bringup/launch/.bringup.launch.py.swp
 /home/go1/Desktop/workspace/unitree_go1/install/champ_bringup/share/champ_bringup/launch/include/laser/xv11.launch
 /home/go1/Desktop/workspace/unitree_go1/install/champ_bringup/share/champ_bringup/launch/include/laser/kinect.launch
 /home/go1/Desktop/workspace/unitree_go1/install/champ_bringup/share/champ_bringup/launch/include/laser/sweep.launch

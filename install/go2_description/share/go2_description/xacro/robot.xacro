@@ -124,10 +124,12 @@
     
 
     <!-- Realsense d435i Camera -->  
+
     <xacro:sensor_d435i parent="mount_frame" use_nominal_extrinsics="true" >
     	<origin xyz="0.076 0.0 0.062" rpy="0 0 0" />
     </xacro:sensor_d435i>
 
+    <!-- End realsense --> 
 
     <xacro:leg name="rf" mirror="-1" mirror_dae= "False" front_hind="1"  front_hind_dae="True"  />
     <xacro:leg name="lf" mirror="1"  mirror_dae="True"   front_hind="1"  front_hind_dae="True"  />

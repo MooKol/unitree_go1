@@ -38,8 +38,7 @@ def generate_launch_description():
     default_world_path = os.path.join(config_pkg_share, "worlds/default.world")
 
     default_rviz_path = os.path.join(config_pkg_share, "rviz/go2_viewer.rviz")
-    print(default_rviz_path)
-    print("dssssssssssssssssssss\n")
+
     declare_use_sim_time = DeclareLaunchArgument(
         "use_sim_time",
         default_value="true",
