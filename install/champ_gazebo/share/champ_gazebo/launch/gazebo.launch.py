@@ -41,8 +41,9 @@ def generate_launch_description():
         default_value=os.path.join(gz_pkg_share, "config/ros_control.yaml"),
     )
     declare_gazebo_world = DeclareLaunchArgument(
-        "world", default_value=os.path.join(gz_pkg_share, "worlds/default.world")
+        "world", default_value=os.path.join(gz_pkg_share, "worlds/my_world.world")
     )
+
     declare_world_init_x = DeclareLaunchArgument("world_init_x", default_value="0.0")
     declare_world_init_y = DeclareLaunchArgument("world_init_y", default_value="0.0")
     declare_world_init_z = DeclareLaunchArgument("world_init_z", default_value="0.6")
@@ -58,7 +59,7 @@ def generate_launch_description():
     config_pkg_share = launch_ros.substitutions.FindPackageShare(
         package="champ_config"
     ).find("champ_config")
-    
+
     links_config = os.path.join(config_pkg_share, "config/links/links.yaml")
     gazebo_config = os.path.join(launch_ros.substitutions.FindPackageShare(
         package="champ_gazebo"
