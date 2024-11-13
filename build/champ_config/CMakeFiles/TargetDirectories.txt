@@ -1,9 +1,0 @@
-/home/go1/Desktop/workspace/unitree_go1/build/champ_config/CMakeFiles/uninstall.dir
-/home/go1/Desktop/workspace/unitree_go1/build/champ_config/CMakeFiles/champ_config_uninstall.dir
-/home/go1/Desktop/workspace/unitree_go1/build/champ_config/CMakeFiles/test.dir
-/home/go1/Desktop/workspace/unitree_go1/build/champ_config/CMakeFiles/edit_cache.dir
-/home/go1/Desktop/workspace/unitree_go1/build/champ_config/CMakeFiles/rebuild_cache.dir
-/home/go1/Desktop/workspace/unitree_go1/build/champ_config/CMakeFiles/list_install_components.dir
-/home/go1/Desktop/workspace/unitree_go1/build/champ_config/CMakeFiles/install.dir
-/home/go1/Desktop/workspace/unitree_go1/build/champ_config/CMakeFiles/install/local.dir
-/home/go1/Desktop/workspace/unitree_go1/build/champ_config/CMakeFiles/install/strip.dir

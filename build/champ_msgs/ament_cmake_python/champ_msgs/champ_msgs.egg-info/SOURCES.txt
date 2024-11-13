@@ -1,6 +1,0 @@
-setup.py
-champ_msgs/__init__.py
-champ_msgs.egg-info/PKG-INFO
-champ_msgs.egg-info/SOURCES.txt
-champ_msgs.egg-info/dependency_links.txt
-champ_msgs.egg-info/top_level.txt

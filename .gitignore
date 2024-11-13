@@ -2,6 +2,9 @@
 **/build/
 **/install/
 **/log/
+build/
+install/
+log/
 
 # Ignore colcon cache and setup files
 **/colcon*
