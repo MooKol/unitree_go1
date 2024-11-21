@@ -6,6 +6,7 @@ build/
 install/
 log/
 frames*
+**/frames*
 
 # Ignore colcon cache and setup files
 **/colcon*
