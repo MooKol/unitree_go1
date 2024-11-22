@@ -4,12 +4,13 @@ from ament_index_python.packages import get_package_share_directory, get_package
 
 from launch_ros.actions import Node
 from launch import LaunchDescription
-from launch.substitutions import LaunchConfiguration, TextSubstitution
+from launch.substitutions import LaunchConfiguration, TextSubstitution, PathJoinSubstitution
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, RegisterEventHandler, SetEnvironmentVariable
 from launch.event_handlers import OnProcessExit, OnProcessStart
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from unitree_nav_launch_module import TernaryTextSubstitution
 from launch.conditions import IfCondition
+from launch_ros.substitutions import FindPackageShare
 
 # this is the function launch  system will look for
 
@@ -157,7 +158,7 @@ def generate_launch_description():
                 'frame_id':'base_link',
                 'odom_frame_id':'odom',
                 'wait_for_transform':0.3, # 0.2
-                'expected_update_rate':15.0,
+                'expected_update_rate': 10.0,
                 'deskewing': LaunchConfiguration('deskewing'),
                 'use_sim_time':LaunchConfiguration('use_sim_time'),
             }],
@@ -242,7 +243,7 @@ def generate_launch_description():
             'Mem/STMSize', '30',
             'Mem/LaserScanNormalK', '20',
             'Reg/Strategy', '1',
-            'Icp/VoxelSize', '0.1',
+            'Icp/VoxelSize', '0.05',
             'Icp/PointToPlaneK', '20',
             'Icp/PointToPlaneRadius', '0',
             'Icp/PointToPlane', 'true',
@@ -253,6 +254,27 @@ def generate_launch_description():
             'Icp/Strategy', '1',
             'Icp/OutlierRatio', '0.7',
             'Icp/CorrespondenceRatio', '0.2',
+            'Grid/CellSize', '0.05',
+            'Grid/RangeMax', '10',
+            'Grid/GroundIsObstacle', 'false',
+            'Grid/RayTracing', 'true',
+            'Grid/3D', 'true',
+            'Grid/FootprintLength', '0.82',
+            'Grid/FootprintWidth', '0.7',
+            'Grid/FootprintHeight', '0.4',
+            'Grid/NormalsSegmentation', 'false',
+            'Grid/NormalK', '40',
+            'Grid/MaxGroundAngle', '30',
+            'Grid/MaxGroundHeight', '0.2',
+            'Grid/ClusterRadius', '0.2',
+            'Grid/MinClusterSize', '30',
+            'Grid/FlatObstacleDetected', 'false',
+            'Grid/MaxObstacleHeight', '0.0',
+            'Grid/NoiseFilteringRadius', '0.0',
+            'Grid/NoiseFilteringMinNeighbors', '0.0',
+            'GridGlobal/Eroded', 'true',
+            'GridGlobal/FootprintRadius', '0.255',
+            'GridGlobal/OccupancyThr', '0.5',
             '--ros-args',
             '--log-level',
             [
@@ -277,81 +299,45 @@ def generate_launch_description():
         )
 
 
-    """
-    Node(
-            package='rviz2',
-            executable='rviz2',
-            arguments=[
-                '-d',
-                PathJoinSubstitution([
-                    FindPackageShare('unitree_nav'),
-                    'config',
-                    'nav.rviz'
-                ])
-            ],
-            condition=IfCondition(LaunchConfiguration('use_rviz')),
-        )
-                IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                PathJoinSubstitution([
-                    FindPackageShare('nav2_bringup'),
-                    'launch',
-                    'navigation_launch.py'
-                ])
-            ),
-            launch_arguments=[
-                ('params_file',
+    nav2_bringup = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource(
                     PathJoinSubstitution([
-                        FindPackageShare('unitree_nav'),
-                        'config',
-                        'nav2_params.yaml'
+                        FindPackageShare('nav2_bringup'),
+                        'launch',
+                        'navigation_launch.py'
                     ])
                 ),
-            ],
-        )
-    """
-
+                launch_arguments=[
+                    ('params_file',
+                        PathJoinSubstitution([
+                            FindPackageShare('go1_description'),
+                            'config',
+                            'nav2_params.yaml'
+                        ])
+                    ),
+                ],
+            )
+            
+    rviz_node = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource(
+                    PathJoinSubstitution([
+                        FindPackageShare('nav2_bringup'),
+                        'launch',
+                        'rviz_launch.py'
+                    ])
+                ))
+            
     # create and return launch description object
     return LaunchDescription(
-        [
+        [  use_sim_time_arg,
+            use_rtabmapviz_arg,
+            rtabmap_log_level_arg,
             localize_only_arg,
             restart_map_arg,
-            use_rtabmapviz_arg, 
-            rtabmap_log_level_arg,
-            use_sim_time_arg,
-            icp_odometry_log_level_arg,
-            deskewing_arg,
-            set_env_var_gazebo,
-            world_file_name_arg,
-            urdf_file_arg,
-            start_world,
-            spawn_robot,
-            lidar_to_pcd_node,
-            odom_from_lidar_node,
-            launch_ros2_control,
-            visualize_robot,
             rtabmap_slam_node,
-            rtabmap_viz_node
+            rtabmap_viz_node, 
+            nav2_bringup,
+            rviz_node
         ]
     )
-"""
 
-    return LaunchDescription(
-        [
-            use_sim_time_arg,
-            icp_odometry_log_level_arg,
-            deskewing_arg,
-            set_env_var_gazebo,
-            world_file_name_arg,
-            urdf_file_arg,
-            start_world,
-            spawn_robot,
-            lidar_to_pcd_node,
-            odom_from_lidar_node,
-            launch_ros2_control,
-            visualize_robot,
-            map_odom_tf_publisher_node,
-            static_map_publisher_node
-        ]
-    )
-"""

@@ -73,13 +73,6 @@ def generate_launch_description():
         output='screen'
     )
 
-    static_map_publisher_node = Node(
-        package='go1_navigation',
-        executable='static_map_publisher',
-        name='static_map_publisher',
-        output='screen'
-    )
-
     map_file_path = os.path.join(get_package_share_directory('go1_navigation'), 'map', 'map.yaml')
 
     map_publisher_node = Node(
@@ -157,7 +150,7 @@ def generate_launch_description():
                 'frame_id':'base_link',
                 'odom_frame_id':'odom',
                 'wait_for_transform':0.3, # 0.2
-                'expected_update_rate':15.0,
+                'expected_update_rate':10.0,
                 'deskewing': LaunchConfiguration('deskewing'),
                 'use_sim_time':LaunchConfiguration('use_sim_time'),
             }],
@@ -205,24 +198,4 @@ def generate_launch_description():
             visualize_robot,
         ]
     )
-"""
 
-    return LaunchDescription(
-        [
-            use_sim_time_arg,
-            icp_odometry_log_level_arg,
-            deskewing_arg,
-            set_env_var_gazebo,
-            world_file_name_arg,
-            urdf_file_arg,
-            start_world,
-            spawn_robot,
-            lidar_to_pcd_node,
-            odom_from_lidar_node,
-            launch_ros2_control,
-            visualize_robot,
-            map_odom_tf_publisher_node,
-            static_map_publisher_node
-        ]
-    )
-"""

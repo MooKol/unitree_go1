@@ -43,18 +43,18 @@
     <child link="base_link" />
     <origin xyz="0 0 0.010" rpy="0 0 0"/>
   </joint>
-  --> 
+
   
   
-  <!--
+  
       <gazebo>
         <plugin name="p3d_ground_truth" filename="libgazebo_ros_p3d.so">        
-            <body_name>base_footprint</body_name>
+            <body_name>base_link</body_name>
             <topic_name>odom</topic_name>
             <update_rate>100</update_rate>
         </plugin>
     </gazebo>
-   -->
+  --> 
 
     <link name="base_link">
         <visual>
