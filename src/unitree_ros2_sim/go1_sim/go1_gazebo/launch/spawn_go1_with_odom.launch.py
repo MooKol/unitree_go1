@@ -213,7 +213,7 @@ def generate_launch_description():
             ])
 
     control_delayed = TimerAction(
-            period=15.0,
+            period=30.0,
             actions=[launch_ros2_control]
             )
 
