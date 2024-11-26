@@ -5,7 +5,7 @@ from ament_index_python.packages import get_package_share_directory, get_package
 from launch_ros.actions import Node
 from launch import LaunchDescription
 from launch.substitutions import LaunchConfiguration, TextSubstitution
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, RegisterEventHandler, SetEnvironmentVariable, TimerAction
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, RegisterEventHandler, SetEnvironmentVariable
 from launch.event_handlers import OnProcessExit, OnProcessStart
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
@@ -34,44 +34,11 @@ def generate_launch_description():
         default_value='robot.xacro'
     )
 
-
-    position_x = LaunchConfiguration('position_x')
-    position_y = LaunchConfiguration('position_y')
-    position_z = LaunchConfiguration('position_z')
-    orientation_x = LaunchConfiguration('orientation_x')
-    orientation_y = LaunchConfiguration('orientation_y')
-    orientation_z = LaunchConfiguration('orientation_z')
-
-    position_x_arg = DeclareLaunchArgument(
-        'position_x',
-        default_value='0.0'
-    )
-    
-    position_y_arg = DeclareLaunchArgument(
-        'position_y',
-        default_value='0.0'
-    )
-    
-    position_z_arg = DeclareLaunchArgument(
-        'position_z',
-        default_value='0.0'
-    )
-    
-    orientation_x_arg = DeclareLaunchArgument(
-        'orientation_x',
-        default_value='0.0'
-    )
-    
-    orientation_y_arg = DeclareLaunchArgument(
-        'orientation_y',
-        default_value='0.0'
-    )
-    
-    orientation_z_arg = DeclareLaunchArgument(
-        'orientation_z',
-        default_value='0.0'
-    )
-
+    # Position and orientation
+    # [X, Y, Z]
+    position = [0, 0.0, 0.6]
+    # [Roll, Pitch, Yaw]
+    orientation = [0.0, 0.0, 0.0]
     # Base Name or robot
     robot_name = "GO1"
     
@@ -91,12 +58,20 @@ def generate_launch_description():
         output='screen',
         arguments=['-entity',
                    robot_name,
-                   '-x', position_x, '-y', position_y, '-z', position_z,
-                   '-R', orientation_x, '-P', orientation_y, '-Y', orientation_z,
+                   '-x', str(position[0]), '-y', str(position[1]
+                                                     ), '-z', str(position[2]),
+                   '-R', str(orientation[0]), '-P', str(orientation[1]
+                                                        ), '-Y', str(orientation[2]),
                    '-topic', '/robot_description'
                    ]
     )
-   
+
+    map_odom_tf_publisher_node = Node(
+        package='go1_navigation',
+        executable='nav_tf_publisher',
+        name='map_odom_transform_publisher',
+        output='screen'
+    )
 
     map_file_path = os.path.join(get_package_share_directory('go1_navigation'), 'map', 'map.yaml')
 
@@ -108,7 +83,17 @@ def generate_launch_description():
         parameters=[{'yaml_filename': map_file_path}],
         remappings=[('map', 'map')]
     )
- 
+    
+    manager_node = Node(
+        package='nav2_lifecycle_manager',
+        executable='lifecycle_manager',
+        name='lifecycle_manager_map_server',
+        output='screen',
+        parameters=[{'use_sim_time': False},
+                    {'autostart': True},
+                    {'node_names': ['map_server']}]
+    )
+
     launch_ros2_control = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('go1_gazebo'), 'launch'),
@@ -196,32 +181,9 @@ def generate_launch_description():
                 ],
             ])
 
-
-    spawn_robot_with_odom_delayed = TimerAction(
-            period=10.0,
-            actions=[
-                spawn_robot,
-                lidar_to_pcd_node,
-                odom_from_lidar_node,
-            ],
-        )
-
-    launch_ros2_control_delayed = TimerAction(
-            period=15.0,
-            actions=[
-            ],
-        )
-
-
     # create and return launch description object
     return LaunchDescription(
         [
-            position_x_arg,
-            position_y_arg,
-            position_z_arg,
-            orientation_x_arg,
-            orientation_y_arg,
-            orientation_z_arg,
             use_sim_time_arg,
             icp_odometry_log_level_arg,
             deskewing_arg,
@@ -229,9 +191,11 @@ def generate_launch_description():
             world_file_name_arg,
             urdf_file_arg,
             start_world,
+            spawn_robot,
+            lidar_to_pcd_node,
+            odom_from_lidar_node,
+            launch_ros2_control,
             visualize_robot,
-	    spawn_robot_with_odom_delayed,
-            launch_ros2_control_delayed,
         ]
     )
 
