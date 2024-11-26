@@ -234,9 +234,7 @@ def generate_launch_description():
             urdf_file_arg,
             start_world,
             spawn_robot,
-            lidar_to_pcd_node,
-            odom_from_lidar_node,
-            control_delayed,
+            launch_ros2_control,
             visualize_robot,
         ]
     )

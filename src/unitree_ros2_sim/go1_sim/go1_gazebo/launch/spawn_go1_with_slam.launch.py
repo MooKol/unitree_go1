@@ -158,7 +158,7 @@ def generate_launch_description():
                 'frame_id':'base_link',
                 'odom_frame_id':'odom',
                 'wait_for_transform':0.3, # 0.2
-                'expected_update_rate': 10.0,
+                'expected_update_rate': 15.0,
                 'deskewing': LaunchConfiguration('deskewing'),
                 'use_sim_time':LaunchConfiguration('use_sim_time'),
             }],
@@ -329,11 +329,16 @@ def generate_launch_description():
             
     # create and return launch description object
     return LaunchDescription(
-        [  use_sim_time_arg,
+        [  
+            icp_odometry_log_level_arg,
+            deskewing_arg,
+            use_sim_time_arg,
             use_rtabmapviz_arg,
             rtabmap_log_level_arg,
             localize_only_arg,
             restart_map_arg,
+            lidar_to_pcd_node,
+            odom_from_lidar_node,
             rtabmap_slam_node,
             rtabmap_viz_node, 
             nav2_bringup,
