@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <robot>
     <!-- Show the trajectory of trunk center. -->
-    <!-- <gazebo>
+    <gazebo>
         <plugin name="3dplot" filename="libLinkPlot3DPlugin.so">
             <frequency>10</frequency>
             <plot>
-                <link>base</link>
+                <link>base_link</link>
                 <pose>0 0 0 0 0 0</pose>
                 <material>Gazebo/Yellow</material>
             </plot>
         </plugin>
-    </gazebo> -->
+    </gazebo>
 
     <!-- Show the trajectory of foot. You can add another trajectory about another foot. -->
     <!-- <gazebo>

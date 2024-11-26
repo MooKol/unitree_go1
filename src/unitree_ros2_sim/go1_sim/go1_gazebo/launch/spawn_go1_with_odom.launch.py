@@ -5,7 +5,7 @@ from ament_index_python.packages import get_package_share_directory, get_package
 from launch_ros.actions import Node
 from launch import LaunchDescription
 from launch.substitutions import LaunchConfiguration, TextSubstitution
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, RegisterEventHandler, SetEnvironmentVariable
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, RegisterEventHandler, SetEnvironmentVariable, TimerAction
 from launch.event_handlers import OnProcessExit, OnProcessStart
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
@@ -34,11 +34,44 @@ def generate_launch_description():
         default_value='robot.xacro'
     )
 
-    # Position and orientation
-    # [X, Y, Z]
-    position = [0, 0.0, 0.6]
-    # [Roll, Pitch, Yaw]
-    orientation = [0.0, 0.0, 0.0]
+    position_x = LaunchConfiguration('position_x')
+    position_y = LaunchConfiguration('position_y')
+    position_z = LaunchConfiguration('position_z')
+    
+    orientation_x = LaunchConfiguration('orientation_x')
+    orientation_y = LaunchConfiguration('orientation_y')
+    orientation_z = LaunchConfiguration('orientation_z')
+    
+    position_x_arg = DeclareLaunchArgument(
+        'position_x',
+        default_value='0.0'
+    )
+    
+    position_y_arg = DeclareLaunchArgument(
+        'position_y',
+        default_value='0.0'
+    )
+    
+    position_z_arg = DeclareLaunchArgument(
+        'position_z',
+        default_value='0.0'
+    )
+    
+    orientation_x_arg = DeclareLaunchArgument(
+        'orientation_x',
+        default_value='0.0'
+    )
+    
+    orientation_y_arg = DeclareLaunchArgument(
+        'orientation_y',
+        default_value='0.0'
+    )
+    
+    orientation_z_arg = DeclareLaunchArgument(
+        'orientation_z',
+        default_value='0.0'
+    )
+
     # Base Name or robot
     robot_name = "GO1"
     
@@ -58,10 +91,8 @@ def generate_launch_description():
         output='screen',
         arguments=['-entity',
                    robot_name,
-                   '-x', str(position[0]), '-y', str(position[1]
-                                                     ), '-z', str(position[2]),
-                   '-R', str(orientation[0]), '-P', str(orientation[1]
-                                                        ), '-Y', str(orientation[2]),
+                   '-x', position_x, '-y', position_y, '-z', position_z,
+                   '-R', orientation_x, '-P', orientation_y, '-Y', orientation_z,
                    '-topic', '/robot_description'
                    ]
     )
@@ -181,9 +212,20 @@ def generate_launch_description():
                 ],
             ])
 
+    control_delayed = TimerAction(
+            period=15.0,
+            actions=[launch_ros2_control]
+            )
+
     # create and return launch description object
     return LaunchDescription(
         [
+            position_x_arg,
+            position_y_arg,
+            position_z_arg,
+            orientation_x_arg,
+            orientation_y_arg,
+            orientation_z_arg,
             use_sim_time_arg,
             icp_odometry_log_level_arg,
             deskewing_arg,
@@ -194,7 +236,7 @@ def generate_launch_description():
             spawn_robot,
             lidar_to_pcd_node,
             odom_from_lidar_node,
-            launch_ros2_control,
+            control_delayed,
             visualize_robot,
         ]
     )

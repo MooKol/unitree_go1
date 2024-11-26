@@ -23,30 +23,6 @@ def generate_launch_description():
                    "--controller-manager", "/controller_manager"],
     )
 
-    # FR_robot_controller_spawner = Node(
-    #     package="controller_manager",
-    #     executable="spawner",
-    #     arguments=["FRposition_trajectory_controller", "-c", "/controller_manager"],
-    # )
-
-    # FL_robot_controller_spawner = Node(
-    #     package="controller_manager",
-    #     executable="spawner",
-    #     arguments=["FLposition_trajectory_controller", "-c", "/controller_manager"],
-    # )
-
-    # RR_robot_controller_spawner = Node(
-    #     package="controller_manager",
-    #     executable="spawner",
-    #     arguments=["RRposition_trajectory_controller", "-c", "/controller_manager"],
-    # )
-    
-    # RL_robot_controller_spawner = Node(
-    #     package="controller_manager",
-    #     executable="spawner",
-    #     arguments=["RLposition_trajectory_controller", "-c", "/controller_manager"],
-    # )
-
     FR_hip_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
@@ -118,13 +94,11 @@ def generate_launch_description():
         executable="spawner",
         arguments=["RL_calf_controller", "-c", "/controller_manager"],
     )
-    
 
     # create and return launch description object
     return LaunchDescription(
         [
             joint_state_broadcaster_spawner,
-            
             RegisterEventHandler(
                 event_handler=OnProcessExit(
                   target_action=joint_state_broadcaster_spawner,

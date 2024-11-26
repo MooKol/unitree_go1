@@ -35,27 +35,6 @@
     </xacro:if> 
 
 
-  <!--
-  <link name="base_footprint"/>
-
-  <joint name="base_joint" type="fixed">
-    <parent link="base_footprint"/>
-    <child link="base_link" />
-    <origin xyz="0 0 0.010" rpy="0 0 0"/>
-  </joint>
-
-  
-  
-  
-      <gazebo>
-        <plugin name="p3d_ground_truth" filename="libgazebo_ros_p3d.so">        
-            <body_name>base_link</body_name>
-            <topic_name>odom</topic_name>
-            <update_rate>100</update_rate>
-        </plugin>
-    </gazebo>
-  --> 
-
     <link name="base_link">
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -199,38 +178,6 @@
         </contact>
         </sensor>
     </gazebo>
-        
-    <!-- Visualization of Foot contacts. -->
-    <!--
-    <gazebo reference="FR_foot">
-        <visual>
-            <plugin name="drawForcePlugin" filename="libunitreeDrawForcePlugin.so">
-                <topicName>FR_foot_contact</topicName>
-            </plugin>
-        </visual>
-    </gazebo>
-    <gazebo reference="FL_foot">
-        <visual>
-            <plugin name="drawForcePlugin" filename="libunitreeDrawForcePlugin.so">
-                <topicName>FL_foot_contact</topicName>
-            </plugin>
-        </visual>
-    </gazebo>
-    <gazebo reference="RR_foot">
-        <visual>
-            <plugin name="drawForcePlugin" filename="libunitreeDrawForcePlugin.so">
-                <topicName>RR_foot_contact</topicName>
-            </plugin>
-        </visual>
-    </gazebo>
-    <gazebo reference="RL_foot">
-        <visual>
-            <plugin name="drawForcePlugin" filename="libunitreeDrawForcePlugin.so">
-                <topicName>RL_foot_contact</topicName>
-            </plugin>
-        </visual>
-    </gazebo>
-    --> 
     
     <xacro:depthCamera camID="1" name="face">
         <origin rpy="0 0 0" xyz="0.2785 -0.0125 0.0167"/>
