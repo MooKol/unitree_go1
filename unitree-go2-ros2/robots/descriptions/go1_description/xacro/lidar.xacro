@@ -25,6 +25,7 @@
       <collision name="lidar_collision">
          <origin xyz="0 0 0.0365" rpy="0 0 0" />
          <geometry>
+            <cylinder radius="0.04" length="0.073"/>
          </geometry>
       </collision>
     </link>
