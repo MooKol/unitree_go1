@@ -68,9 +68,9 @@ def generate_launch_description():
     )
     declare_world_init_x = DeclareLaunchArgument("world_init_x", default_value="0.0")
     declare_world_init_y = DeclareLaunchArgument("world_init_y", default_value="0.0")
-    declare_world_init_z = DeclareLaunchArgument("world_init_z", default_value="0.275")
+    declare_world_init_z = DeclareLaunchArgument("world_init_z", default_value="1.0")
     declare_world_init_heading = DeclareLaunchArgument(
-        "world_init_heading", default_value="0.0"
+        "world_init_heading", default_value="3.14"
     )
 
     bringup_ld = IncludeLaunchDescription(
@@ -159,8 +159,8 @@ def generate_launch_description():
             parameters=[{
                 'frame_id':'base_link',
                 'odom_frame_id':'odom',
-                'wait_for_transform':0.3, # 0.2
-                'expected_update_rate':10.0,
+                'wait_for_transform': 0.3, # 0.2
+                'expected_update_rate': 15.0,
                 'deskewing': LaunchConfiguration('deskewing'),
                 'use_sim_time':LaunchConfiguration('use_sim_time'),
             }],
@@ -169,8 +169,8 @@ def generate_launch_description():
             ],
             arguments=[
                 'Icp/PointToPlane', 'true',
-                'Icp/Iterations', '10',
-                'Icp/VoxelSize', '0.1',
+                'Icp/Iterations', '5',
+                'Icp/VoxelSize', '0.05',
                 'Icp/Epsilon', '0.001',
                 'Icp/PointToPlaneK', '20',
                 'Icp/PointToPlaneRadius', '0',

@@ -129,8 +129,8 @@ controller_server:
     general_goal_checker:
       stateful: True
       plugin: "nav2_controller::SimpleGoalChecker"
-      xy_goal_tolerance: 0.05
-      yaw_goal_tolerance: 0.2
+      xy_goal_tolerance: 0.15
+      yaw_goal_tolerance: 0.3
     # DWB parameters
     FollowPath:
       plugin: "dwb_core::DWBLocalPlanner"
@@ -139,22 +139,22 @@ controller_server:
       min_vel_y: -0.15
       max_vel_x: 0.15
       max_vel_y: 0.15
-      max_vel_theta: 1.0
+      max_vel_theta: 0.5
       min_speed_xy: 0.0
       max_speed_xy: 0.15
-      min_speed_theta: 0.0
+      min_speed_theta: 0.1
       acc_lim_x: 1.5
       acc_lim_y: 1.5
       acc_lim_theta: 2.2
       decel_lim_x: -1.5
       decel_lim_y: -1.5
       decel_lim_theta: -2.2
-      vx_samples: 20
-      vy_samples: 20
-      vtheta_samples: 20
-      sim_time: 1.7
-      linear_granularity: 0.05
-      angular_granularity: 0.025
+      vx_samples: 30
+      vy_samples: 30
+      vtheta_samples: 40
+      sim_time: 2.5
+      linear_granularity: 0.02
+      angular_granularity: 0.01
       transform_tolerance: 0.2
       xy_goal_tolerance: 0.1
       trans_stopped_velocity: 0.25
@@ -328,7 +328,7 @@ behavior_server:
     use_sim_time: true
     simulate_ahead_time: 2.0
     max_rotational_vel: 0.6
-    min_rotational_vel: 0.4
+    min_rotational_vel: 0.1
     rotational_acc_lim: 3.2
 
 robot_state_publisher:
