@@ -234,6 +234,9 @@ def generate_launch_description():
     )
 
 
+    #footprint_to_odom_ekf,
+    #state_estimator_node,
+    #base_to_footprint_ekf,
     return LaunchDescription(
         [
             declare_use_sim_time,
@@ -257,9 +260,6 @@ def generate_launch_description():
             declare_publish_odom_tf,
             declare_close_loop_odom,
             description_ld,
-            state_estimator_node,
-            base_to_footprint_ekf,
-            footprint_to_odom_ekf,
             rviz2,
             quadruped_controller_node
         ]
