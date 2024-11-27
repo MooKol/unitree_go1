@@ -9,7 +9,8 @@ from launch.actions import (
     DeclareLaunchArgument,
     ExecuteProcess,
     IncludeLaunchDescription,
-    SetEnvironmentVariable
+    SetEnvironmentVariable,
+    TimerAction
 )
 from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
@@ -189,6 +190,9 @@ def generate_launch_description():
                     LaunchConfiguration('icp_odometry_log_level')
                 ],
             ])
+
+    odom_delayed = TimerAction(period=20.0, actions=[odom_from_lidar_node])
+
     return LaunchDescription(
         [
             declare_gazebo_world,
@@ -208,6 +212,6 @@ def generate_launch_description():
             bringup_ld,
             gazebo_ld,
             lidar_to_pcd_node,
-            odom_from_lidar_node
+            odom_delayed
         ]
     )

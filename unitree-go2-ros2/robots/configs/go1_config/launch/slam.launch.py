@@ -104,7 +104,7 @@ def generate_launch_description():
     rtabmap_slam_node = Node(
         package='rtabmap_slam', executable='rtabmap', output='screen',
         parameters=[{
-            'frame_id':'laser_link',
+            'frame_id':'lidar',
             'subscribe_depth':False,
             'subscribe_rgb':False,
             'subscribe_scan_cloud':True,
@@ -170,7 +170,7 @@ def generate_launch_description():
     rtabmap_viz_node =  Node(
             package='rtabmap_viz', executable='rtabmap_viz', output='screen',
             parameters=[{
-                'frame_id':'laser_link',
+                'frame_id':'lidar',
                 'odom_frame_id':'odom',
                 'subscribe_odom_info':True,
                 'subscribe_scan_cloud':True,
