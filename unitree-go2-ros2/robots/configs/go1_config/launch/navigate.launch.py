@@ -12,7 +12,7 @@ from unitree_nav_launch_module import TernaryTextSubstitution
 from launch.conditions import IfCondition
 from launch_ros.substitutions import FindPackageShare
 
-# this is the function launch  system will look for
+
 
 
 def generate_launch_description():
