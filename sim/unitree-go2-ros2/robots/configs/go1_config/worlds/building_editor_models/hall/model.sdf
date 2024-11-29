@@ -6,14 +6,14 @@
       <collision name="collision">
         <geometry>
           <mesh>
-            <uri>file:///home/go1/Desktop/workspace/unitree_go1/unitree-go2-ros2/robots/configs/go1_config/worlds/building_editor_models/hall/meshes/hall.dae</uri>
+            <uri>file:///home/go1/Desktop/workspace/unitree_go1/sim/unitree-go2-ros2/robots/configs/go1_config/worlds/building_editor_models/hall/meshes/hall.dae</uri>
           </mesh>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <uri>file:///home/go1/Desktop/workspace/unitree_go1/unitree-go2-ros2/robots/configs/go1_config/worlds/building_editor_models/hall/meshes/hall.dae</uri>
+            <uri>file:///home/go1/Desktop/workspace/unitree_go1/sim/unitree-go2-ros2/robots/configs/go1_config/worlds/building_editor_models/hall/meshes/hall.dae</uri>
           </mesh>
         </geometry>
         <transparency> 0.1 </transparency>

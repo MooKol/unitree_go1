@@ -40,7 +40,7 @@
 
     <!-- Custom dae file (converted from IFC) -->
     <include>
-      <uri>/home/go1/Desktop/workspace/unitree_go1/unitree-go2-ros2/robots/configs/go1_config/worlds/building_editor_models/hall</uri>
+      <uri>/home/go1/Desktop/workspace/unitree_go1/sim/unitree-go2-ros2/robots/configs/go1_config/worlds/building_editor_models/hall</uri>
       <pose>16 -5 4.4 0 0 0</pose>
     </include>
 

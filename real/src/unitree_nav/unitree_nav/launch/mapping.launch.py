@@ -6,21 +6,6 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
-"""
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                PathJoinSubstitution([
-                    FindPackageShare('rslidar_sdk'),
-                    'launch',
-                    'start.py'
-                ])
-            ),
-            launch_arguments=[
-                ('use_rviz', LaunchConfiguration('use_rviz')),
-            ],
-        ),
-"""
-
 def generate_launch_description():
     return LaunchDescription([
 
@@ -54,7 +39,7 @@ def generate_launch_description():
 
         DeclareLaunchArgument(
             name='icp_odometry_log_level',
-            default_value='WARN', # reduce output from this node
+            default_value='INFO', # reduce output from this node
             choices=['ERROR', 'WARN', 'INFO', 'DEBUG'],
             description='Set logger level for icp_odometry. Can set to WARN to reduce message output from this node.'
         ),
