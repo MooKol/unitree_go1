@@ -108,8 +108,8 @@
         "timestamp_mode": "TIME_FROM_INTERNAL_OSC",
         "udp_dest": "10.5.5.1",
         "udp_ip": "10.5.5.1",
-        "udp_port_imu": 50553,
-        "udp_port_lidar": 39196,
+        "udp_port_imu": 42786,
+        "udp_port_lidar": 54820,
         "udp_profile_imu": "LEGACY",
         "udp_profile_lidar": "LEGACY"
     },
