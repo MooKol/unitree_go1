@@ -58,13 +58,20 @@ def generate_launch_description():
             executable="static_transform_publisher",
             arguments=['--frame-id', 'base_link', '--child-frame-id', 'base_laser'],
             condition=IfCondition(LaunchConfiguration('publish_static_tf'))
-        ),
+        ), 
+        Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            name='static_transform_publisher',
+            output='screen',
+            arguments=['0.0', '0.0', '-0.036', '0.0', '0.0', '-1.0', '0.0', 'os_sensor_mount_lidar', 'os_sensor']
+        ), 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
                 PathJoinSubstitution([
                     FindPackageShare('unitree_nav'),
                     'launch',
-                    'rslidar_robosense.launch.py'
+                    'ouster_slam.launch.py'
                 ])
             ),
             launch_arguments=[
