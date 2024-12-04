@@ -1,0 +1,8 @@
+<CycloneDDS>
+  <Domain>
+    <General>
+      <!-- Use this interface for communication -->
+      <NetworkInterfaceAddress>wlp3s0</NetworkInterfaceAddress>
+    </General>
+  </Domain>
+</CycloneDDS>
