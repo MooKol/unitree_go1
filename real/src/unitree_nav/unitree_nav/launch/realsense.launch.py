@@ -20,6 +20,7 @@ def generate_launch_description():
                 "enable_depth": "false",
                 "pointcloud.enable": "true",
                 "rgb_camera.color_profile": "640x480x30",
+                "rgb_camera.color_format": "BGR8", 
             }.items(),
         ),
         Node(
