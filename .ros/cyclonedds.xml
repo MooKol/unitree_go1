@@ -1,0 +1,7 @@
+<CycloneDDS>
+  <Domain>
+    <General>
+      <NetworkInterfaceAddress>wlo1</NetworkInterfaceAddress>
+    </General>
+  </Domain>
+</CycloneDDS>

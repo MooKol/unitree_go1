@@ -4,6 +4,6 @@
 CONTAINER_NAME="ros2_container"
 
 echo "Building ROS2-Humble Container"
-docker build --rm --progress plain -t $CONTAINER_NAME:latest .
+docker build --rm --progress plain --no-cache -t $CONTAINER_NAME:latest .
 
 echo "Docker Build Completed"
