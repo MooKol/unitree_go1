@@ -36,7 +36,7 @@ def generate_launch_description():
     gait_config = os.path.join(config_pkg_share, "config/gait/gait.yaml")
     links_config = os.path.join(config_pkg_share, "config/links/links.yaml")
     default_model_path = os.path.join(descr_pkg_share, "xacro/robot.xacro")
-    default_world_path = os.path.join(config_pkg_share, "worlds/my_world.world")
+    default_world_path = os.path.join(config_pkg_share, "worlds/hall.world")
 
     default_rviz_path = os.path.join(config_pkg_share, "rviz/go1_viewer.rviz")
 
@@ -121,7 +121,14 @@ def generate_launch_description():
         }.items(),
     )
 
-    set_env_var_gazebo = SetEnvironmentVariable("GAZEBO_MODEL_PATH", os.path.join(get_package_prefix("go1_description"), "share"))
+    set_env_var_gazebo = SetEnvironmentVariable(
+    name="GAZEBO_MODEL_PATH",
+    value=":".join([
+        os.path.join(get_package_prefix("go1_description"), "share"),
+        os.path.join(get_package_prefix("go1_config"), "share"),
+        "/additional/path"
+    ])
+)
 
     lidar_to_pcd_node = Node(
         package='pointcloud_to_laserscan',
@@ -192,7 +199,8 @@ def generate_launch_description():
             ])
 
     odom_delayed = TimerAction(period=20.0, actions=[odom_from_lidar_node])
-
+    
+    # lidar_to_pcd_node,
     return LaunchDescription(
         [
             declare_gazebo_world,
@@ -211,7 +219,7 @@ def generate_launch_description():
             deskewing_arg,
             bringup_ld,
             gazebo_ld,
-            lidar_to_pcd_node,
+
             odom_delayed
             
         ]

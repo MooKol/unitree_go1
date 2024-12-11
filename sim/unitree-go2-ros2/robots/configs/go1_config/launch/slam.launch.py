@@ -90,7 +90,7 @@ def generate_launch_description():
 
     use_rtabmapviz_arg = DeclareLaunchArgument(
                 name='use_rtabmapviz',
-                default_value='false',
+                default_value='true',
                 choices=['true','false'],
                 description='Start rtabmapviz node'
             )
