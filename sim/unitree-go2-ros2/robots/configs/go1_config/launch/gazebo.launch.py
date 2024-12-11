@@ -127,9 +127,9 @@ def generate_launch_description():
         os.path.join(get_package_prefix("go1_description"), "share"),
         os.path.join(get_package_prefix("go1_config"), "share"),
         "/additional/path"
-    ])
-)
+    ]))
 
+    """
     lidar_to_pcd_node = Node(
         package='pointcloud_to_laserscan',
         executable='pointcloud_to_laserscan_node',
@@ -148,6 +148,7 @@ def generate_launch_description():
             'range_max': 90.0
         }]
     )
+    """
     icp_odometry_log_level_arg =  DeclareLaunchArgument(
             name='icp_odometry_log_level',
             default_value='INFO',
@@ -219,7 +220,6 @@ def generate_launch_description():
             deskewing_arg,
             bringup_ld,
             gazebo_ld,
-
             odom_delayed
             
         ]
