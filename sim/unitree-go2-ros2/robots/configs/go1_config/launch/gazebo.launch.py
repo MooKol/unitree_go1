@@ -36,7 +36,7 @@ def generate_launch_description():
     gait_config = os.path.join(config_pkg_share, "config/gait/gait.yaml")
     links_config = os.path.join(config_pkg_share, "config/links/links.yaml")
     default_model_path = os.path.join(descr_pkg_share, "xacro/robot.xacro")
-    default_world_path = os.path.join(config_pkg_share, "worlds/hall.world")
+    default_world_path = os.path.join(config_pkg_share, "worlds/hall.world") # complete.world 
 
     default_rviz_path = os.path.join(config_pkg_share, "rviz/go1_viewer.rviz")
 
@@ -68,7 +68,7 @@ def generate_launch_description():
     )
     declare_world_init_x = DeclareLaunchArgument("world_init_x", default_value="0.0")
     declare_world_init_y = DeclareLaunchArgument("world_init_y", default_value="0.0")
-    declare_world_init_z = DeclareLaunchArgument("world_init_z", default_value="1.0")
+    declare_world_init_z = DeclareLaunchArgument("world_init_z", default_value="1.5")
     declare_world_init_heading = DeclareLaunchArgument(
         "world_init_heading", default_value="3.14"
     )

@@ -122,7 +122,6 @@
         <origin xyz="0.007 0.0 0.134" rpy="0.0 0 3.14159" />
     </xacro:lidar>
     
-
     <!-- Realsense d435i Camera -->  
     <xacro:sensor_d435i parent="mount_frame" use_nominal_extrinsics="true" >
     	<origin xyz="0.076 0.0 0.062" rpy="0 0 0" />
