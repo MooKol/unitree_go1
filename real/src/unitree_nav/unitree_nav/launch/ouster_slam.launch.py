@@ -147,6 +147,10 @@ def generate_launch_description():
                 'Icp/Strategy', '1',
                 'Icp/OutlierRatio', '0.7',
                 'Icp/CorrespondenceRatio', '0.2',
+                'Grid/RangeMax', '3.5',
+                'Grid/RangeMin', '0.01',
+                'Grid/RayTracing', 'true',
+                'Grid/MaxGroundAngle', '60',
                 '--ros-args',
                 '--log-level',
                 [

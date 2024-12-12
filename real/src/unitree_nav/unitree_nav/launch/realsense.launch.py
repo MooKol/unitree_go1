@@ -18,7 +18,7 @@ def generate_launch_description():
             PythonLaunchDescriptionSource(rs_launch_path),
             launch_arguments={
                 "enable_depth": "false",
-                "pointcloud.enable": "true",
+                "pointcloud.enable": "false",
                 "rgb_camera.color_profile": "640x480x30",
                 "rgb_camera.color_format": "BGR8", 
             }.items(),
