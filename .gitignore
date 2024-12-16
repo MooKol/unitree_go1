@@ -1,0 +1,51 @@
+# Ignore all build, install, and log directories, no matter where they are located
+**/build/
+**/install/
+**/log/
+build/
+install/
+log/
+
+# Ignore colcon cache and setup files
+**/colcon*
+**/install/local_setup.*
+**/install/setup.*
+**/install/_local_setup_util.py
+
+# Ignore CMake build files
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Ignore Python bytecode and cache
+__pycache__/
+*.py[cod]
+
+# Ignore Python virtual environment directories
+env/
+venv/
+.venv/
+pip-wheel-metadata/
+*.egg-info/
+*.eggs/
+
+# Ignore editor/IDE specific files (VSCode, CLion, PyCharm, etc.)
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore temporary files created by editors or OS
+*.bak
+*.tmp
+*.log
+*.orig
+*.patch
+
+# Ignore the FixMe temporary file for tracking incomplete tasks
+fix_me.txt

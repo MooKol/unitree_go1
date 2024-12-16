@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="lidar" params="name *origin hz:=15 samples:=512 min_range:=0.1 max_range:=90 noise:=0.008">
+
+    <joint name="lidar_joint" type="fixed">
+      <xacro:insert_block name="origin" />
+      <parent link="mount_frame"/>
+      <child link="lidar"/>
+    </joint>
+
+    <link name="lidar">
+      <visual>
+        <geometry>
+          <mesh filename="file://$(find go1_description)/meshes/ouster.dae"/>
+        </geometry>
+      </visual>
+
+      <inertial>
+        <mass value="0.410"/>
+         <origin xyz="0 0 0.0365" rpy="0 0 0" />
+         <inertia ixx="0.000241148" ixy="0" ixz="0"
+          iyy="0.000241148" iyz="0" izz="0.000264"/>
+      </inertial>
+      <collision name="lidar_collision">
+         <origin xyz="0 0 0.0365" rpy="0 0 0" />
+         <geometry>
+            <cylinder radius="0.04" length="0.073"/>
+         </geometry>
+      </collision>
+    </link>
+
+    <!-- Ouster laser plugin for gazebo -->
+    <gazebo reference="lidar">
+      <sensor type="ray" name="lidar_sensor">
+        <pose>0 0 0 0 0 0</pose>
+        <always_on>true</always_on>
+        <visualize>false</visualize>
+        <update_rate>${hz}</update_rate>
+       
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>${samples}</samples>
+              <resolution>1</resolution>
+              <min_angle>-3.14159</min_angle>
+              <max_angle>3.14159</max_angle>
+            </horizontal>
+            <vertical>
+              <samples>32</samples>
+              <resolution>1.0</resolution>
+              <min_angle>-0.26</min_angle>
+              <max_angle>0.26</max_angle>
+            </vertical>
+          </scan>
+        
+          <range>
+            <min>${min_range}</min>
+            <max>${max_range}</max>
+            <resolution>0.03</resolution>
+          </range>
+        
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>${noise}</stddev>
+          </noise>
+        </ray>
+            
+        <plugin name="lidar" filename="libgazebo_ros_ray_sensor.so">
+          <ros>
+             <remapping>~/out:=scan_pcd</remapping>
+          </ros>
+          <!--<output_type>sensor_msgs/LaserScan</output_type>-->
+          <frame_name>lidar</frame_name>
+          <min_range>${min_range}</min_range>
+          <max_range>${max_range}</max_range>
+          <gaussianNoise>${noise}</gaussianNoise>
+        </plugin>
+        
+      </sensor>
+    </gazebo>
+  
+  </xacro:macro> 
+</robot>

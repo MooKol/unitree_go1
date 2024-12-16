@@ -1,0 +1,7 @@
+/**:
+  ros__parameters:
+    inspection_points:
+      text:   [ "000"]
+      x:      [  2.00]
+      y:      [  0.000]
+      theta:  [  0.000]

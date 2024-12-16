@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="hall">
+    <static>true</static>
+    <link name="walls">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://go1_config/worlds/building_editor_models/complete/meshes/CMS_chair_complete.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://go1_config/worlds/building_editor_models/complete/meshes/CMS_chair_complete.stl</uri>
+          </mesh>
+        </geometry>
+        <transparency> 0.1 </transparency>
+      </visual>
+    </link>
+  </model>
+</sdf>
