@@ -1,0 +1,57 @@
+- google chrome:
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+
+
+sudo apt install git
+
+- vim: 
+sudo apt remove --assume-yes vim-tiny
+sudo apt update
+sudo apt install vim
+
+sudo apt install build-essential
+
+
+- vim boostrap: 
+sudo apt-get install git exuberant-ctags ncurses-term curl
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+mkdir -p ~/.vim/colors
+cd ~/.vim/colors
+wget https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
+
+mv ~/Downloads/generate.vim ~/.vimrc
+vim
+:VimBootstrapUpdate (thanks to @sherzberg)
+:PlugInstall
+
+
+set mouse=a --> add at the end in ~/.vimrc 
+
+
+sudo apt install htop
+
+
+sudo apt install python3-pip
+
+sudo apt install python2
+
+- curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
+- sudo python2 get-pip.py
+
+
+sudo apt-get install pinta
+pip3 install virtualenv
+
+
+sudo apt-get install gimp
+
+
+
+sudo apt install net-tools
+
+1) https://gist.github.com/dbaldwin/feb0d279c67e0bcb191d2b366f867a84
+
+https://greenwebpage.com/community/how-to-use-ssh-to-connect-to-a-remote-server-on-ubuntu-22-04/
