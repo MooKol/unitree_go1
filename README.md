@@ -77,7 +77,7 @@ source install/setup.bash
 ```
 
 ## Simulation in Gazebo
-If you want to check the utonamous navigation of the robot in the simulation environment(gazebo), follow the following steps inside the repository.
+To test the autonomous navigation of the Go1 robot in the simulation environment(Gazebo), follow the steps provided in this repository.
 
 ## Simulation Demo
 
@@ -114,12 +114,25 @@ source install/setup.bash
 ros2 launch go1_config navigate.launch.py 
 ```
 
+## Real World Experiments
+To test the autonomous navigation of the Go1 robot in a real-world environment, follow the steps provided in this repository.
 
-## Simulation in Gazebo
+## Navigation Demo
+<p align="center">
+  <img src="docs/Media1.gif" width="800" alt="Unitree Go1 Navigation Demo">
+</p>
+
+
+## Inspection Demo
+<p align="center">
+  <img src="docs/Media2.gif" width="800" alt="Unitree Go1 Inspection Demo">
+</p>
+
+
+
+## Citations
 
 Petropoulakis, P. and Kolani, M R. and Borrmann, A.: CAutonomous operation of a robot dog for point-cloud data acquisition. The 32nd EG-ICE International Workshop on Intelligent Computing in Engineering (EG-ICE), 2025
-
-.. code-block::
 
     @inproceedings{GO2:2025:EGICE, 
         title={Autonomous operation of a robot dog for point-cloud data acquisition}, 
