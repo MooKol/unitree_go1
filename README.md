@@ -79,6 +79,12 @@ source install/setup.bash
 ## Simulation in Gazebo
 If you want to check the utonamous navigation of the robot in the simulation environment(gazebo), follow the following steps inside the repository.
 
+## Simulation Demo
+
+<p align="center">
+  <img src="doc/Media3.gif" width="800" alt="Unitree Go1 Simulation Demo">
+</p>
+
 ```bash
 cd ~/sim
 colcon build
@@ -110,6 +116,9 @@ ros2 launch go1_config navigate.launch.py
 
 
 ## Simulation in Gazebo
+
+Petropoulakis, P. and Kolani, M R. and Borrmann, A.: CAutonomous operation of a robot dog for point-cloud data acquisition. The 32nd EG-ICE International Workshop on Intelligent Computing in Engineering (EG-ICE), 2025
+
 .. code-block::
 
     @inproceedings{GO2:2025:EGICE, 
