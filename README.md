@@ -21,9 +21,7 @@ In this package is our integration for the Unitee Go1 robot.
 - [x] Change configuration for robot
 - [x] SLAM
 - [x] Nav2
-- [ ] Ros2cli (working in progress)
-- [ ] Hardware interface
-- [ ] Gazebo simulation
+- [x] Gazebo simulation
 
 ## Installation
 You need to have previously installed ROS2. Please follow this [guide](https://docs.ros.org/en/humble/Installation.html) if you don't have it.
@@ -132,6 +130,9 @@ To test the autonomous navigation of the Go1 robot in a real-world environment, 
 
 ## Citations
 
+If you use this work or our data in your research, please cite it appropriately. The following BibTeX entrie is the most accurate versions available:
+
+
 Petropoulakis, P. and Kolani, M R. and Borrmann, A.: CAutonomous operation of a robot dog for point-cloud data acquisition. The 32nd EG-ICE International Workshop on Intelligent Computing in Engineering (EG-ICE), 2025
 
     @inproceedings{GO2:2025:EGICE, 
@@ -145,3 +146,6 @@ Petropoulakis, P. and Kolani, M R. and Borrmann, A.: CAutonomous operation of a 
         booktitle={The 32nd EG-ICE International Workshop on Intelligent Computing in Engineering}, 
         location={Glasgow, Scotland}, 
     }
+
+
+Thank you for acknowledging our work!
