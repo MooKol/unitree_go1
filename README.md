@@ -82,7 +82,7 @@ If you want to check the utonamous navigation of the robot in the simulation env
 ## Simulation Demo
 
 <p align="center">
-  <img src="doc/Media3.gif" width="800" alt="Unitree Go1 Simulation Demo">
+  <img src="docs/Media3.gif" width="800" alt="Unitree Go1 Simulation Demo">
 </p>
 
 ```bash
